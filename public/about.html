@@ -4,81 +4,232 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>О проекте — Libermall ID</title>
-<meta name="description" content="Libermall ID — единая система идентификации для экосистемы Libermall. История, миссия, технологии.">
+<meta name="description" content="Libermall ID — единая система идентификации для экосистемы Libermall. История, миссия, технологии, дорожная карта.">
 <link rel="canonical" href="https://id.libermall.com/about.html">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#0A0A0C">
 <meta property="og:title" content="О проекте Libermall ID">
-<meta property="og:description" content="Миссия и архитектура единого SSO Libermall.">
 <meta property="og:url" content="https://id.libermall.com/about.html">
 <meta property="og:image" content="https://id.libermall.com/assets/og-cover.svg">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/style.css">
+<style>
+  .roadmap-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 24px; }
+  @media (max-width: 768px) { .roadmap-list { grid-template-columns: 1fr; } }
+  .rm-item { background: var(--bg-elev-1); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; }
+  .rm-item.done { border-color: rgba(52,211,153,0.3); }
+  .rm-tag { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: 11px; font-weight: 700; letter-spacing: 0.04em; margin-bottom: 12px; }
+  .rm-tag.done { background: rgba(52,211,153,0.12); color: var(--green); }
+  .rm-tag.now { background: var(--primary-dim); color: var(--primary); }
+  .rm-tag.next { background: var(--bg-elev-3); color: var(--muted); }
+  .rm-item h3 { font-size: 1.05rem; margin: 0 0 8px; }
+  .rm-item p { font-size: 13px; color: var(--text-soft); margin: 0; }
+  .rm-item ul { margin: 8px 0 0; padding-left: 18px; color: var(--text-soft); font-size: 13px; }
+
+  .mission-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 32px; }
+  @media (max-width: 768px) { .mission-grid { grid-template-columns: 1fr; } }
+  .mission-card { background: var(--bg-elev-1); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 32px; }
+  .mission-card h3 { margin: 0 0 12px; font-size: 1.1rem; }
+  .mission-card p { color: var(--text-soft); margin: 0; font-size: 14px; line-height: 1.6; }
+
+  .timeline { position: relative; padding-left: 32px; margin-top: 32px; }
+  .timeline::before { content: ""; position: absolute; left: 12px; top: 12px; bottom: 12px; width: 1px; background: var(--border); }
+  .tl-item { position: relative; padding: 0 0 24px 16px; }
+  .tl-item::before { content: ""; position: absolute; left: -25px; top: 6px; width: 8px; height: 8px; border-radius: 50%; background: var(--primary); box-shadow: 0 0 12px var(--primary); }
+  .tl-date { font-size: 12px; color: var(--muted); font-weight: 500; margin-bottom: 6px; }
+  .tl-title { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
+  .tl-desc { font-size: 13px; color: var(--text-soft); }
+</style>
 </head>
 <body>
 
 <nav class="nav">
   <div class="container nav-inner">
-    <a href="/" class="nav-logo"><img src="/assets/logo.svg" alt="Libermall ID" height="40"></a>
-    <button class="nav-toggle" aria-label="Меню" onclick="document.querySelector('.nav-links').classList.toggle('open')">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg>
-    </button>
-    <div class="nav-links">
-      <a href="/products.html">Продукты</a>
-      <a href="/developers.html">Разработчикам</a>
-      <a href="/about.html">О проекте</a>
-      <a href="/login" class="btn btn-primary">Войти</a>
-    </div>
+    <a href="/" class="nav-logo"><img src="/assets/logo.svg" alt="Libermall ID" height="36"></a>
+    <div class="nav-links"><a href="/products.html">Продукты</a><a href="/developers.html">Разработчикам</a><a href="/about.html">О проекте</a><a href="/developers.html#docs">Docs</a></div>
+    <div class="nav-actions"><a href="/login" class="btn btn-ghost">Войти</a><a href="/signup" class="btn btn-primary">Создать аккаунт</a></div>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg></button>
   </div>
 </nav>
 
-<article class="long">
-  <div class="container-narrow">
-    <h1>О проекте Libermall ID</h1>
-    <p class="article-lead">Единая идентификация для всех продуктов экосистемы Libermall — от каталога отзывов до криптобиржи.</p>
-
-    <h2>Зачем мы это делаем</h2>
-    <p>Экосистема Libermall — это сеть из взаимосвязанных продуктов: маркетплейс, биржа, виртуальные карты, каталог отзывов, AI-сервисы. Каждый из них работает лучше когда знает контекст пользователя — какие сайты вы любите, какие монеты держите, какой рейтинг как трейдера. До Libermall ID каждый сервис вёл свою отдельную базу аккаунтов — и связи между ними рвались.</p>
-    <p>Libermall ID решает эту фрагментацию: один профиль работает везде, история переносится между продуктами, не нужно регистрироваться по сто раз.</p>
-
-    <h2>Технологии</h2>
-    <ul>
-      <li><strong>OpenID Connect 1.0</strong> — стандарт identity layer поверх OAuth 2.0</li>
-      <li><strong>OAuth 2.0</strong> — для авторизации сторонних приложений</li>
-      <li><strong>SAML 2.0</strong> — для корпоративной интеграции</li>
-      <li><strong>JWT</strong> с RS256 для подписи токенов (4096-bit ключ)</li>
-      <li><strong>Telegram Login Widget</strong> + <strong>TON Connect v2</strong> как identity providers</li>
-      <li><strong>WebAuthn / Passkeys</strong> для passwordless 2FA</li>
-    </ul>
-
-    <h2>Архитектура</h2>
-    <p>В основе — <a href="https://casdoor.org">Casdoor</a> (open-source, BSD 3-Clause), индустриальный identity server, спонсируемый Casbin Foundation. Поверх него — наш брендированный UI и собственные адаптеры для Telegram и TON Connect.</p>
-    <p>Сервер развёрнут на изолированном VPS в Frankfurt с автоматическим обновлением SSL через Let's Encrypt и daily бэкапами.</p>
-
-    <h2>Open Source</h2>
-    <p>Большая часть инфраструктуры открыта: <a href="https://github.com/DeFiTON/libermall-id">github.com/DeFiTON/libermall-id</a>. Документация, deploy-скрипты, integration-examples — всё там.</p>
-
-    <h2>Дорожная карта</h2>
-    <ul>
-      <li><strong>Phase 1</strong> ✅ — деплой Casdoor, домен, SSL</li>
-      <li><strong>Phase 2</strong> ✅ — Telegram provider, первый OAuth-клиент (Sites.Reviews)</li>
-      <li><strong>Phase 3</strong> — TON Connect provider, личный кабинет, брендированный UI</li>
-      <li><strong>Phase 4</strong> — NFT-имена <code>@handle.lbm</code> через смарт-контракт на TON</li>
-      <li><strong>Phase 5</strong> — Cross-product рейтинги трейдеров, вишлисты на маркетплейсе</li>
-    </ul>
-
-    <h2>Команда и контакты</h2>
-    <p>Проект ведёт команда <a href="https://libermall.com">Libermall</a>. Контакт: <a href="mailto:hello@libermall.com">hello@libermall.com</a>.</p>
+<header class="hero" style="padding-bottom: 40px;">
+  <div class="container" style="text-align:center;max-width:760px;">
+    <span class="eyebrow"><span class="dot"></span>About</span>
+    <h1>Единая идентификация<br>для <span class="accent">Web3-экосистемы</span></h1>
+    <p class="lead" style="margin:0 auto;max-width:560px;">Libermall ID решает фрагментацию аккаунтов между продуктами экосистемы Libermall. Один профиль работает везде, история переносится, не нужно регистрироваться по сто раз.</p>
   </div>
-</article>
+</header>
+
+<!-- ─── Mission + Tech ─── -->
+<section class="section" style="padding-top:40px;">
+  <div class="container">
+    <span class="section-eyebrow">Mission</span>
+    <h2 class="section-title">Зачем мы это делаем</h2>
+    <div class="mission-grid">
+      <div class="mission-card">
+        <h3>🎯 Миссия</h3>
+        <p>Экосистема Libermall — это сеть взаимосвязанных продуктов: маркетплейс, биржа, виртуальные карты, каталог отзывов, AI-сервисы. Каждый работает лучше когда знает контекст пользователя — какие сайты вы оценили, какие монеты держите, какой рейтинг у вас как трейдера. До Libermall ID каждый сервис вёл свою отдельную базу аккаунтов — связи между ними рвались.</p>
+      </div>
+      <div class="mission-card">
+        <h3>⚡ Решение</h3>
+        <p>Libermall ID — один профиль, работающий везде. История переносится между продуктами. Не нужно регистрироваться по сто раз. Telegram-вход за один тап, TON Connect для криптокошельков, email magic-link для классики. Стандартный OpenID Connect — никакого vendor lock-in.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Technology stack ─── -->
+<section class="section" style="padding-top:0;">
+  <div class="container">
+    <span class="section-eyebrow">Tech stack</span>
+    <h2 class="section-title">На чём построено</h2>
+
+    <div class="why-grid" style="margin-top:24px;">
+      <div class="why-text"></div>
+      <div class="why-card">
+        <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z M3.27 6.96 12 12.01l8.73-5.05 M12 22V12" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Casdoor core</h3>
+        <p>Open-source identity server (BSD 3-Clause). Поддерживает OpenID Connect, OAuth 2.0, SAML 2.0, LDAP federation. 11k+ stars на GitHub.</p>
+      </div>
+      <div class="why-card">
+        <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5 M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3" stroke-linejoin="round"/></svg></div>
+        <h3>PostgreSQL 16 + Redis 7</h3>
+        <p>Профиль и сессии — Postgres, кэш и nonce — Redis. Daily backup, шифрование at-rest.</p>
+      </div>
+      <div class="why-card">
+        <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>JWT RS256</h3>
+        <p>4096-bit ключ для подписи токенов. JWKS rotation. Token lifetime 7 дней.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Architecture diagram ─── -->
+<section class="section" style="padding-top:0;">
+  <div class="container">
+    <span class="section-eyebrow">Architecture</span>
+    <h2 class="section-title">Как это работает изнутри</h2>
+    <p class="section-lead">Стандартный OAuth 2.0 / OpenID Connect flow. Кастомные адаптеры для Telegram Login Widget и TON Connect proof.</p>
+
+    <div class="code-wrap" style="margin-top:24px;">
+      <div class="code-tabs"><span class="code-tab active">Flow</span></div>
+<pre class="code-block"><span class="c-com">┌─────────────────────────────────────────────────────────────────┐
+│                   id.libermall.com (Casdoor)                    │
+│                                                                 │
+│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐  ┌────────┐  │
+│  │ TG Login    │  │ TON Connect │  │ Email Magic │  │ Apple  │  │
+│  │ IdP         │  │ IdP custom  │  │ Link        │  │ Google │  │
+│  └──────┬──────┘  └──────┬──────┘  └──────┬──────┘  └────┬───┘  │
+│         └────────┬───────┴────────────────┴──────────────┘      │
+│                  ▼                                              │
+│         ┌────────────────────┐                                  │
+│         │   Casdoor Core     │                                  │
+│         │  Users / Sessions  │                                  │
+│         │  Tokens (JWT)      │                                  │
+│         │  Audit Log         │                                  │
+│         └────────┬───────────┘                                  │
+└──────────────────┼──────────────────────────────────────────────┘
+                   │ OAuth2 / OIDC
+                   ▼
+   ┌───────────────────────────────────────────────┐
+   │           OAuth-клиенты (продукты)            │
+   │  sites.reviews · tonchat.ai · ton.ceo · DEX   │
+   │  card · marketplace · 3rd-party integrations  │
+   └───────────────────────────────────────────────┘
+</span></pre>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Roadmap ─── -->
+<section class="section">
+  <div class="container">
+    <span class="section-eyebrow">Roadmap</span>
+    <h2 class="section-title">Дорожная карта</h2>
+    <p class="section-lead">5 фаз развития от MVP до полной cross-product интеграции с tokenized identity.</p>
+
+    <div class="roadmap-list">
+      <div class="rm-item done">
+        <span class="rm-tag done">✓ Phase 1 · Done</span>
+        <h3>Foundation</h3>
+        <p>VPS, Casdoor, SSL, DNS, базовая инфраструктура.</p>
+      </div>
+      <div class="rm-item done">
+        <span class="rm-tag done">✓ Phase 2 · Done</span>
+        <h3>Integration</h3>
+        <p>Telegram IdP, @LibermallIDbot, sites.reviews как первый OAuth client.</p>
+      </div>
+      <div class="rm-item">
+        <span class="rm-tag now">● Phase 3 · In progress</span>
+        <h3>Brand & UX</h3>
+        <p>Landing site, brand book, Mini App, личный кабинет с управлением кошельками и сессиями.</p>
+      </div>
+      <div class="rm-item">
+        <span class="rm-tag next">○ Phase 4 · Next</span>
+        <h3>NFT usernames + $MALL</h3>
+        <p>Минтинг <code>@handle.lbm</code> через смарт-контракт на TON. Token economy для рейтинга экосистемы.</p>
+      </div>
+      <div class="rm-item" style="grid-column: 1 / -1;">
+        <span class="rm-tag next">○ Phase 5 · Future</span>
+        <h3>Cross-product fabric</h3>
+        <p>Wishlists в marketplace привязаны к ID, рейтинг трейдера на DEX, накопления на Card, отзывы на Sites.Reviews — единая активность по экосистеме. Quest-система и achievements за действия в разных продуктах.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Open source ─── -->
+<section class="section" style="padding-top:0;">
+  <div class="container">
+    <span class="section-eyebrow">Open source</span>
+    <h2 class="section-title">Всё, что мы можем — публично</h2>
+    <p class="section-lead">Auth core — Casdoor (BSD 3-Clause). Наш UI, бот и Mini App — MIT.</p>
+
+    <div class="why-grid" style="margin-top:24px;">
+      <div class="why-text"></div>
+      <a href="https://github.com/DeFiTON/libermall-id" class="why-card" style="color:inherit;text-decoration:none;">
+        <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg></div>
+        <h3>libermall-id</h3>
+        <p>Архитектура, deploy скрипты, integration-examples.</p>
+      </a>
+      <a href="https://github.com/DeFiTON/libermall-id-landing" class="why-card" style="color:inherit;text-decoration:none;">
+        <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg></div>
+        <h3>libermall-id-landing</h3>
+        <p>Этот сайт + brand book.</p>
+      </a>
+      <a href="https://github.com/DeFiTON/libermall-id-bot" class="why-card" style="color:inherit;text-decoration:none;">
+        <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg></div>
+        <h3>libermall-id-bot + miniapp</h3>
+        <p>Telegram бот и Mini App.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Contact ─── -->
+<section class="section" style="padding-bottom:0;">
+  <div class="container">
+    <div class="cta-final">
+      <h2>Вопросы, идеи, предложения?</h2>
+      <p>Команда Libermall открыта к диалогу. Пишите — отвечаем в течение суток.</p>
+      <div class="actions">
+        <a href="mailto:hello@libermall.com" class="btn btn-primary btn-lg">hello@libermall.com</a>
+        <a href="https://t.me/LibermallIDbot" class="btn btn-secondary btn-lg">@LibermallIDbot</a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <footer>
   <div class="container">
-    <div><img src="/assets/logo.svg" alt="Libermall ID" height="36" ><p style="margin-top:16px;font-size:14px;">Единая идентификация для Libermall.</p></div>
-    <div><h4>Продукты</h4><ul><li><a href="https://sites.reviews">Sites.Reviews</a></li><li><a href="https://tonchat.ai">TonChat AI</a></li><li><a href="https://dex.libermall.com">DEX</a></li><li><a href="https://card.libermall.com">Card</a></li></ul></div>
+    <div><img src="/assets/logo.svg" alt="Libermall ID" height="36"><p class="desc">Identity layer для экосистемы Libermall.</p></div>
+    <div><h4>Продукт</h4><ul><li><a href="/login">Войти</a></li><li><a href="/signup">Создать аккаунт</a></li><li><a href="/products.html">Экосистема</a></li><li><a href="/about.html">О проекте</a></li></ul></div>
     <div><h4>Разработчикам</h4><ul><li><a href="/developers.html">Документация</a></li><li><a href="/integrate.html">Интегрировать</a></li><li><a href="https://github.com/DeFiTON/libermall-id">GitHub</a></li></ul></div>
-    <div><h4>Юридическое</h4><ul><li><a href="/about.html">О проекте</a></li><li><a href="/privacy.html">Приватность</a></li><li><a href="/terms.html">Условия</a></li></ul></div>
+    <div><h4>Юридическое</h4><ul><li><a href="/privacy.html">Приватность</a></li><li><a href="/terms.html">Условия</a></li><li><a href="mailto:hello@libermall.com">Контакт</a></li></ul></div>
   </div>
-  <div class="footer-bottom container">© 2026 Libermall.</div>
+  <div class="footer-bottom container"><div>© 2026 Libermall</div><div>Open source · <a href="https://github.com/DeFiTON/libermall-id">DeFiTON/libermall-id</a></div></div>
 </footer>
 
 </body>

@@ -4,96 +4,158 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Продукты экосистемы — Libermall ID</title>
-<meta name="description" content="Полный список продуктов, которые принимают единый вход Libermall ID: Sites.Reviews, TonChat AI, TON.CEO, DEX, Card, Marketplace.">
+<meta name="description" content="Полный список продуктов экосистемы Libermall, которые принимают единый вход Libermall ID: Sites.Reviews, TonChat AI, TON.CEO, DEX, Card, Marketplace.">
 <link rel="canonical" href="https://id.libermall.com/products.html">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#0A0A0C">
+<meta property="og:type" content="website">
 <meta property="og:title" content="Продукты Libermall — все принимают единый вход">
 <meta property="og:url" content="https://id.libermall.com/products.html">
 <meta property="og:image" content="https://id.libermall.com/assets/og-cover.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/style.css">
+<style>
+  .product-detail { background: var(--bg-elev-1); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: 32px; display: grid; grid-template-columns: auto 1fr auto; gap: 24px; align-items: center; transition: all .15s; }
+  .product-detail:hover { border-color: var(--primary); }
+  .product-detail .pico { width: 64px; height: 64px; border-radius: 16px; display: flex; align-items: center; justify-content: center; color: #fff; flex-shrink: 0; }
+  .product-detail h3 { margin: 0 0 6px; font-size: 1.3rem; color: var(--text); }
+  .product-detail .meta { color: var(--muted); font-size: 13px; margin-bottom: 8px; }
+  .product-detail p { margin: 0; color: var(--text-soft); font-size: 14px; max-width: 600px; }
+  .product-detail .tags { display: flex; gap: 6px; margin-top: 10px; flex-wrap: wrap; }
+  .product-detail .tag { padding: 3px 10px; border-radius: 999px; background: var(--bg-elev-3); color: var(--text-soft); font-size: 11px; font-weight: 500; }
+  @media (max-width: 768px) { .product-detail { grid-template-columns: 1fr; text-align: center; } .product-detail .tags { justify-content: center; } }
+  .products-list { display: flex; flex-direction: column; gap: 16px; }
+</style>
 </head>
 <body>
 
 <nav class="nav">
   <div class="container nav-inner">
-    <a href="/" class="nav-logo"><img src="/assets/logo.svg" alt="Libermall ID" height="40"></a>
-    <button class="nav-toggle" aria-label="Меню" onclick="document.querySelector('.nav-links').classList.toggle('open')">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg>
-    </button>
+    <a href="/" class="nav-logo"><img src="/assets/logo.svg" alt="Libermall ID" height="36"></a>
     <div class="nav-links">
       <a href="/products.html">Продукты</a>
       <a href="/developers.html">Разработчикам</a>
       <a href="/about.html">О проекте</a>
-      <a href="/login" class="btn btn-primary">Войти</a>
+      <a href="/developers.html#docs">Docs</a>
     </div>
+    <div class="nav-actions">
+      <a href="/login" class="btn btn-ghost">Войти</a>
+      <a href="/signup" class="btn btn-primary">Создать аккаунт</a>
+    </div>
+    <button class="nav-toggle" aria-label="Меню" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg>
+    </button>
   </div>
 </nav>
 
-<header class="hero" style="padding:60px 0 40px;">
-  <div class="container hero-inner">
-    <h1>Продукты экосистемы</h1>
-    <p class="lead">Войдите через Libermall ID один раз — пользуйтесь во всех сервисах.</p>
+<header class="hero" style="padding-bottom: 40px;">
+  <div class="container">
+    <div style="text-align:center;max-width:760px;margin:0 auto;">
+      <span class="eyebrow"><span class="dot"></span>Ecosystem</span>
+      <h1>Продукты, которые принимают <span class="accent">Libermall ID</span></h1>
+      <p class="lead" style="max-width:none;">Войдите через Libermall ID на любом сервисе экосистемы. История, кошельки, рейтинги — переносятся автоматически.</p>
+    </div>
   </div>
 </header>
 
-<section class="section" style="background:#fff;padding-top:40px;">
+<section class="section" style="padding-top:20px;">
   <div class="container">
-    <div class="grid grid-2">
-      <a href="https://sites.reviews" class="card" style="text-decoration:none;color:inherit;display:flex;gap:20px;align-items:flex-start;">
-        <svg width="56" height="56" viewBox="0 0 40 40" style="flex-shrink:0;"><path d="M9 3h22a6 6 0 0 1 6 6v16a6 6 0 0 1-6 6H17l-7 7v-7H9a6 6 0 0 1-6-6V9a6 6 0 0 1 6-6Z" fill="#2A7BFF"/><path d="M12 17.5l5.5 5.5L29 11.5" stroke="#fff" stroke-width="4.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+    <div class="products-list">
+
+      <a href="https://sites.reviews" class="product-detail">
+        <div class="pico" style="background:#2A7BFF;"><svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-6 4 2 7-6-4-6 4 2-7-6-4h7z"/></svg></div>
         <div>
-          <h3 style="margin:0 0 4px;">Sites.Reviews</h3>
-          <p>Каталог отзывов о сайтах и сервисах. 8 000+ проверенных бизнесов, AI-сводки, проверка безопасности доменов.</p>
+          <h3>Sites.Reviews</h3>
+          <div class="meta">sites.reviews · 8 000+ компаний · 21 000+ отзывов</div>
+          <p>Каталог отзывов о сайтах и сервисах. AI-сводки плюсов и минусов, проверка безопасности доменов (SSL, blacklists, возраст), Trust Score 0-10. Browser extension и embed-widget доступны.</p>
+          <div class="tags"><span class="tag">SEO</span><span class="tag">AI-сводки</span><span class="tag">Browser extension</span><span class="tag">Mini App</span></div>
         </div>
+        <a href="https://sites.reviews" class="btn btn-secondary">Открыть →</a>
       </a>
-      <a href="https://tonchat.ai" class="card" style="text-decoration:none;color:inherit;display:flex;gap:20px;align-items:flex-start;">
-        <div style="width:56px;height:56px;border-radius:14px;background:#0098EA;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:24px;flex-shrink:0;">TC</div>
+
+      <a href="https://tonchat.ai" class="product-detail">
+        <div class="pico" style="background:#22C55E;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8v.5z" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <div>
-          <h3 style="margin:0 0 4px;">TonChat AI</h3>
-          <p>AI-помощник для криптокомьюнити TON. Чат с GPT-моделями, генерация изображений, голосовые ответы.</p>
+          <h3>TonChat AI</h3>
+          <div class="meta">tonchat.ai · AI-помощник для TON-сообщества</div>
+          <p>Чат с современными LLM (GPT, Claude, DeepSeek, Gemini), генерация изображений (DALL-E, Flux, Nano Banana), голосовые ответы (ElevenLabs). Оплата Stars, USDT или TON.</p>
+          <div class="tags"><span class="tag">GPT</span><span class="tag">Image-gen</span><span class="tag">TTS</span><span class="tag">Stars</span></div>
         </div>
+        <a href="https://tonchat.ai" class="btn btn-secondary">Открыть →</a>
       </a>
-      <a href="https://ton.ceo" class="card" style="text-decoration:none;color:inherit;display:flex;gap:20px;align-items:flex-start;">
-        <div style="width:56px;height:56px;border-radius:14px;background:#6364FF;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:22px;flex-shrink:0;">M</div>
+
+      <a href="https://ton.ceo" class="product-detail">
+        <div class="pico" style="background:#0098EA;"><svg width="32" height="32" viewBox="0 0 56 56" fill="currentColor"><path d="M38.45 14H17.55a5.1 5.1 0 00-4.42 7.64L26.57 43a1.65 1.65 0 002.86 0l13.44-21.36A5.1 5.1 0 0038.45 14z"/></svg></div>
         <div>
-          <h3 style="margin:0 0 4px;">TON.CEO</h3>
-          <p>Децентрализованная социальная сеть на ActivityPub (Mastodon-совместимая) для криптокомьюнити.</p>
+          <h3>TON.CEO</h3>
+          <div class="meta">ton.ceo · Mastodon-совместимая социальная сеть</div>
+          <p>Децентрализованная соцсеть на ActivityPub для TON-сообщества. Federation с любым Mastodon-сервером. Привязка TON-кошелька, верификация через rel=me.</p>
+          <div class="tags"><span class="tag">ActivityPub</span><span class="tag">Mastodon</span><span class="tag">Federation</span></div>
         </div>
+        <a href="https://ton.ceo" class="btn btn-secondary">Открыть →</a>
       </a>
-      <a href="https://dex.libermall.com" class="card" style="text-decoration:none;color:inherit;display:flex;gap:20px;align-items:flex-start;">
-        <div style="width:56px;height:56px;border-radius:14px;background:#2ECC71;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:18px;flex-shrink:0;">DEX</div>
+
+      <a href="https://dex.libermall.com" class="product-detail">
+        <div class="pico" style="background:#FFD60A;color:#0A0A0C;"><svg width="32" height="32" viewBox="0 0 56 56" fill="currentColor"><path d="M28 8L48 28L28 48L8 28Z"/></svg></div>
         <div>
-          <h3 style="margin:0 0 4px;">Libermall DEX</h3>
-          <p>Децентрализованная биржа на TON-блокчейне. Обмен Jetton-токенов, ликвидность через Omniston.</p>
+          <h3>Libermall DEX</h3>
+          <div class="meta">dex.libermall.com · Децентрализованная биржа на TON</div>
+          <p>Обмен Jetton-токенов на TON-блокчейне через агрегатор Omniston (Ston.fi + DeDust). Реферальная программа, виджеты, SEO-страницы для каждого токена.</p>
+          <div class="tags"><span class="tag">TON</span><span class="tag">Jetton</span><span class="tag">Omniston</span><span class="tag">Self-custody</span></div>
         </div>
+        <a href="https://dex.libermall.com" class="btn btn-secondary">Открыть →</a>
       </a>
-      <a href="https://card.libermall.com" class="card" style="text-decoration:none;color:inherit;display:flex;gap:20px;align-items:flex-start;">
-        <div style="width:56px;height:56px;border-radius:14px;background:#FFB02E;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:28px;flex-shrink:0;">$</div>
+
+      <a href="https://card.libermall.com" class="product-detail">
+        <div class="pico" style="background:#3B82F6;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg></div>
         <div>
-          <h3 style="margin:0 0 4px;">Libermall Card</h3>
-          <p>Виртуальные банковские карты с пополнением USDT, TON, RUB. Расчёты в любой точке мира.</p>
+          <h3>Libermall Card</h3>
+          <div class="meta">card.libermall.com · Виртуальные банковские карты</div>
+          <p>Выпуск виртуальных карт с пополнением USDT, TON или RUB. Расчёты в любой точке мира. Telegram Mini App для управления, привязка к TON-кошельку.</p>
+          <div class="tags"><span class="tag">USDT</span><span class="tag">TON</span><span class="tag">RUB onramp</span><span class="tag">Mini App</span></div>
         </div>
+        <a href="https://card.libermall.com" class="btn btn-secondary">Открыть →</a>
       </a>
-      <a href="https://libermall.com" class="card" style="text-decoration:none;color:inherit;display:flex;gap:20px;align-items:flex-start;">
-        <div style="width:56px;height:56px;border-radius:14px;background:#17212B;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:24px;flex-shrink:0;">L</div>
+
+      <a href="https://libermall.com" class="product-detail">
+        <div class="pico" style="background:#A855F7;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z M3 6h18 M16 10a4 4 0 1 1-8 0" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <div>
-          <h3 style="margin:0 0 4px;">Marketplace</h3>
-          <p>Универсальный маркетплейс цифровых и физических товаров. Оплата криптовалютой и фиатом.</p>
+          <h3>Marketplace</h3>
+          <div class="meta">libermall.com · Универсальный маркетплейс</div>
+          <p>Цифровые и физические товары, услуги, подписки. Оплата криптовалютой и фиатом. Reviews, вишлисты и quest-система привязаны к Libermall ID.</p>
+          <div class="tags"><span class="tag">Marketplace</span><span class="tag">Crypto pay</span><span class="tag">Wishlist</span><span class="tag">Quests</span></div>
         </div>
+        <a href="https://libermall.com" class="btn btn-secondary">Открыть →</a>
       </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── For developers: add yours ─── -->
+<section class="section" style="padding-top:0;">
+  <div class="container">
+    <div class="cta-final">
+      <h2>Ваш сервис тоже может принимать Libermall ID</h2>
+      <p>Стандартный OpenID Connect, готовые SDK, 5 минут до интеграции.</p>
+      <div class="actions">
+        <a href="/integrate.html" class="btn btn-primary btn-lg">Интегрировать →</a>
+        <a href="/developers.html" class="btn btn-secondary btn-lg">Документация</a>
+      </div>
     </div>
   </div>
 </section>
 
 <footer>
   <div class="container">
-    <div><img src="/assets/logo.svg" alt="Libermall ID" height="36" ><p style="margin-top:16px;font-size:14px;">Единая идентификация.</p></div>
-    <div><h4>Продукты</h4><ul><li><a href="https://sites.reviews">Sites.Reviews</a></li><li><a href="https://tonchat.ai">TonChat AI</a></li><li><a href="https://dex.libermall.com">DEX</a></li><li><a href="https://card.libermall.com">Card</a></li></ul></div>
+    <div><img src="/assets/logo.svg" alt="Libermall ID" height="36"><p class="desc">Identity layer для экосистемы Libermall.</p></div>
+    <div><h4>Продукт</h4><ul><li><a href="/login">Войти</a></li><li><a href="/signup">Создать аккаунт</a></li><li><a href="/products.html">Экосистема</a></li><li><a href="/about.html">О проекте</a></li></ul></div>
     <div><h4>Разработчикам</h4><ul><li><a href="/developers.html">Документация</a></li><li><a href="/integrate.html">Интегрировать</a></li><li><a href="https://github.com/DeFiTON/libermall-id">GitHub</a></li></ul></div>
-    <div><h4>Юридическое</h4><ul><li><a href="/about.html">О проекте</a></li><li><a href="/privacy.html">Приватность</a></li><li><a href="/terms.html">Условия</a></li></ul></div>
+    <div><h4>Юридическое</h4><ul><li><a href="/privacy.html">Приватность</a></li><li><a href="/terms.html">Условия</a></li><li><a href="mailto:hello@libermall.com">Контакт</a></li></ul></div>
   </div>
-  <div class="footer-bottom container">© 2026 Libermall.</div>
+  <div class="footer-bottom container"><div>© 2026 Libermall</div><div>Open source · <a href="https://github.com/DeFiTON/libermall-id">DeFiTON/libermall-id</a></div></div>
 </footer>
 
 </body>

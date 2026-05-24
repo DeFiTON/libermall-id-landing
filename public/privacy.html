@@ -6,17 +6,20 @@
 <title>Политика конфиденциальности — Libermall ID</title>
 <meta name="description" content="Политика конфиденциальности Libermall ID: какие данные собираем, как храним, кому передаём.">
 <link rel="canonical" href="https://id.libermall.com/privacy.html">
-<meta name="robots" content="index,follow">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#0A0A0C">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
 
 <nav class="nav">
   <div class="container nav-inner">
-    <a href="/" class="nav-logo"><img src="/assets/logo.svg" alt="Libermall ID" height="40"></a>
-    <div class="nav-links"><a href="/products.html">Продукты</a><a href="/developers.html">Разработчикам</a><a href="/about.html">О проекте</a><a href="/login" class="btn btn-primary">Войти</a></div>
+    <a href="/" class="nav-logo"><img src="/assets/logo.svg" alt="Libermall ID" height="36"></a>
+    <div class="nav-links"><a href="/products.html">Продукты</a><a href="/developers.html">Разработчикам</a><a href="/about.html">О проекте</a><a href="/developers.html#docs">Docs</a></div>
+    <div class="nav-actions"><a href="/login" class="btn btn-ghost">Войти</a><a href="/signup" class="btn btn-primary">Создать аккаунт</a></div>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg></button>
   </div>
 </nav>
 
@@ -25,18 +28,31 @@
     <h1>Политика конфиденциальности</h1>
     <p class="article-lead">Effective date: 2026-05-24. Версия 1.0.</p>
 
-    <h2>Кто мы</h2>
+    <div class="toc">
+      <h4>Содержание</h4>
+      <a href="#who">Кто мы</a>
+      <a href="#what">Какие данные собираем</a>
+      <a href="#why">Зачем мы это делаем</a>
+      <a href="#sharing">Кому передаём данные</a>
+      <a href="#retention">Сколько храним</a>
+      <a href="#rights">Ваши права</a>
+      <a href="#cookies">Cookies</a>
+      <a href="#security">Безопасность</a>
+      <a href="#changes">Изменения</a>
+    </div>
+
+    <h2 id="who">Кто мы</h2>
     <p>Libermall ID — сервис единой идентификации, оператор экосистемы Libermall. Контакт по вопросам приватности: <a href="mailto:privacy@libermall.com">privacy@libermall.com</a>.</p>
 
-    <h2>Какие данные мы собираем</h2>
+    <h2 id="what">Какие данные мы собираем</h2>
     <ul>
-      <li><strong>Идентификаторы:</strong> Telegram user ID, TON wallet address (если привязан), email (если указан)</li>
-      <li><strong>Профиль:</strong> имя, фамилия, аватар (из Telegram Login Widget)</li>
+      <li><strong>Идентификаторы:</strong> Telegram user ID, TON wallet address (если привязан), email (если указан), Apple ID, Google ID</li>
+      <li><strong>Профиль:</strong> имя, фамилия, аватар (из Telegram Login Widget или social-провайдеров)</li>
       <li><strong>Сессии и активность:</strong> время входа, IP-адрес для rate-limit, история привязки/отвязки сервисов</li>
       <li><strong>Согласия:</strong> для каких сервисов экосистемы вы дали согласие на передачу данных</li>
     </ul>
 
-    <h2>Зачем мы это делаем</h2>
+    <h2 id="why">Зачем мы это делаем</h2>
     <ul>
       <li>Аутентифицировать вас и держать сессию активной</li>
       <li>Передавать вашему согласованному сервису-клиенту минимально необходимые данные</li>
@@ -44,11 +60,11 @@
       <li>Обеспечивать законные требования (например, log-retention)</li>
     </ul>
 
-    <h2>Кому мы передаём данные</h2>
+    <h2 id="sharing">Кому мы передаём данные</h2>
     <p>Только тем сервисам экосистемы Libermall, которым вы явно дали согласие через OAuth consent screen. Передаются только claims, соответствующие запрошенным scopes (например, <code>email</code> только если вы согласились на scope <code>email</code>).</p>
     <p>Третьим сторонам мы не передаём данные, кроме случаев требований закона.</p>
 
-    <h2>Сколько мы храним</h2>
+    <h2 id="retention">Сколько мы храним</h2>
     <ul>
       <li>Аккаунт — пока не удалён вами</li>
       <li>Audit log входов — 12 месяцев</li>
@@ -56,7 +72,7 @@
       <li>Резервные копии БД — 14 дней rolling backup</li>
     </ul>
 
-    <h2>Ваши права</h2>
+    <h2 id="rights">Ваши права</h2>
     <ul>
       <li>Запросить экспорт всех данных о вас (GDPR Article 15)</li>
       <li>Исправить неточные данные</li>
@@ -65,10 +81,10 @@
     </ul>
     <p>Любой запрос — <a href="mailto:privacy@libermall.com">privacy@libermall.com</a>, ответим в течение 30 дней.</p>
 
-    <h2>Cookies</h2>
+    <h2 id="cookies">Cookies</h2>
     <p>Мы используем только функциональные cookies для поддержания сессии. Аналитики или трекинга третьих сторон на id.libermall.com нет.</p>
 
-    <h2>Безопасность</h2>
+    <h2 id="security">Безопасность</h2>
     <ul>
       <li>HTTPS-only (Let's Encrypt SSL)</li>
       <li>JWT-токены подписаны RS256 (4096-bit ключ)</li>
@@ -77,19 +93,21 @@
       <li>Изолированный VPS, открытые только 22/80/443</li>
     </ul>
 
-    <h2>Изменения</h2>
+    <h2 id="changes">Изменения</h2>
     <p>Все изменения публикуются на этой странице с обновлением даты. Существенные изменения — уведомление по email/Telegram.</p>
+
+    <p style="margin-top:48px;color:var(--muted);font-size:13px;">Вопросы: <a href="mailto:privacy@libermall.com">privacy@libermall.com</a></p>
   </div>
 </article>
 
 <footer>
   <div class="container">
-    <div><img src="/assets/logo.svg" alt="Libermall ID" height="36" ></div>
-    <div><h4>Продукты</h4><ul><li><a href="https://sites.reviews">Sites.Reviews</a></li><li><a href="https://tonchat.ai">TonChat AI</a></li></ul></div>
-    <div><h4>Разработчикам</h4><ul><li><a href="/developers.html">Документация</a></li><li><a href="https://github.com/DeFiTON/libermall-id">GitHub</a></li></ul></div>
-    <div><h4>Юридическое</h4><ul><li><a href="/privacy.html">Приватность</a></li><li><a href="/terms.html">Условия</a></li></ul></div>
+    <div><img src="/assets/logo.svg" alt="Libermall ID" height="36"><p class="desc">Identity layer для экосистемы Libermall.</p></div>
+    <div><h4>Продукт</h4><ul><li><a href="/login">Войти</a></li><li><a href="/signup">Создать аккаунт</a></li><li><a href="/products.html">Экосистема</a></li><li><a href="/about.html">О проекте</a></li></ul></div>
+    <div><h4>Разработчикам</h4><ul><li><a href="/developers.html">Документация</a></li><li><a href="/integrate.html">Интегрировать</a></li><li><a href="https://github.com/DeFiTON/libermall-id">GitHub</a></li></ul></div>
+    <div><h4>Юридическое</h4><ul><li><a href="/privacy.html">Приватность</a></li><li><a href="/terms.html">Условия</a></li><li><a href="mailto:hello@libermall.com">Контакт</a></li></ul></div>
   </div>
-  <div class="footer-bottom container">© 2026 Libermall.</div>
+  <div class="footer-bottom container"><div>© 2026 Libermall</div><div>Open source · <a href="https://github.com/DeFiTON/libermall-id">DeFiTON/libermall-id</a></div></div>
 </footer>
 
 </body>

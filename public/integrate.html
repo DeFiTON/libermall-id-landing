@@ -3,105 +3,184 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Интегрировать вход — Libermall ID</title>
-<meta name="description" content="Добавьте кнопку «Войти через Libermall ID» на свой сайт за 5 минут. OpenID Connect, готовый client_id.">
+<title>Интегрировать Libermall ID — за 5 минут</title>
+<meta name="description" content="Добавьте «Войти через Libermall ID» на свой сайт. Готовый OAuth client, бесплатно до 10K MAU, SDK для популярных стеков.">
 <link rel="canonical" href="https://id.libermall.com/integrate.html">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<meta property="og:title" content="Интегрировать Libermall ID в свой сервис">
+<meta name="theme-color" content="#0A0A0C">
+<meta property="og:title" content="Интегрировать Libermall ID за 5 минут">
 <meta property="og:url" content="https://id.libermall.com/integrate.html">
 <meta property="og:image" content="https://id.libermall.com/assets/og-cover.svg">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
 
 <nav class="nav">
   <div class="container nav-inner">
-    <a href="/" class="nav-logo"><img src="/assets/logo.svg" alt="Libermall ID" height="40"></a>
-    <button class="nav-toggle" aria-label="Меню" onclick="document.querySelector('.nav-links').classList.toggle('open')">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg>
-    </button>
-    <div class="nav-links">
-      <a href="/products.html">Продукты</a>
-      <a href="/developers.html">Разработчикам</a>
-      <a href="/about.html">О проекте</a>
-      <a href="/login" class="btn btn-primary">Войти</a>
-    </div>
+    <a href="/" class="nav-logo"><img src="/assets/logo.svg" alt="Libermall ID" height="36"></a>
+    <div class="nav-links"><a href="/products.html">Продукты</a><a href="/developers.html">Разработчикам</a><a href="/about.html">О проекте</a><a href="/developers.html#docs">Docs</a></div>
+    <div class="nav-actions"><a href="/login" class="btn btn-ghost">Войти</a><a href="/signup" class="btn btn-primary">Создать аккаунт</a></div>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg></button>
   </div>
 </nav>
 
-<header class="hero">
-  <div class="container hero-inner">
-    <h1>Интегрировать вход <span class="accent">за 5 минут</span></h1>
-    <p class="lead">Добавьте кнопку «Войти через Libermall ID» на свой сайт. Получите 7000+ пользователей экосистемы.</p>
-    <div class="hero-actions">
-      <a href="mailto:hello@libermall.com?subject=Libermall%20ID%20integration%20request" class="btn btn-primary btn-lg">Запросить доступ</a>
-      <a href="/developers.html" class="btn btn-outline btn-lg">Документация</a>
+<header class="hero" style="padding-bottom: 40px;">
+  <div class="container" style="text-align:center;max-width:760px;">
+    <span class="eyebrow"><span class="dot"></span>Integrate</span>
+    <h1>Добавьте кнопку<br><span class="accent">«Войти через Libermall ID»</span></h1>
+    <p class="lead" style="margin:0 auto;max-width:580px;">Подключите свой сервис к экосистеме Libermall. Получите доступ к 7000+ верифицированных пользователей с привязанными кошельками.</p>
+    <div style="margin-top:24px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
+      <a href="mailto:hello@libermall.com?subject=Libermall%20ID%20integration" class="btn btn-primary btn-lg">Запросить доступ</a>
+      <a href="/developers.html" class="btn btn-secondary btn-lg">Документация</a>
     </div>
   </div>
 </header>
 
-<section class="section" style="background:#fff;">
+<!-- ─── Why integrate ─── -->
+<section class="section" style="padding-top:40px;">
   <div class="container">
-    <h2 class="section-title">3 шага до интеграции</h2>
-    <div class="grid grid-3">
-      <div class="card">
-        <div class="card-icon primary">1</div>
-        <h3>Зарегистрировать app</h3>
-        <p>Напишите на <a href="mailto:hello@libermall.com">hello@libermall.com</a> — получите client_id и client_secret в течение суток.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon primary">2</div>
-        <h3>Подключить OIDC</h3>
-        <p>Используйте готовый SDK для Laravel, Next.js или Node. Конфиг — две строки в .env.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon primary">3</div>
-        <h3>Добавить кнопку</h3>
-        <p>Скопируйте готовый HTML/CSS брендированной кнопки. Юзеры экосистемы войдут одним кликом.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
+    <span class="section-eyebrow">Why</span>
     <h2 class="section-title">Что вы получаете</h2>
-    <div class="grid grid-3">
-      <div class="card">
-        <h3>📈 Готовая аудитория</h3>
+
+    <div class="why-grid" style="margin-top:24px;">
+      <div class="why-text"></div>
+      <div class="why-card">
+        <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>+ Конверсия</h3>
+        <p>Один клик в Telegram вместо формы с email/password/captcha. Конверсия в 3-5× выше типичной.</p>
+      </div>
+      <div class="why-card">
+        <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="7" r="4"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2M16 3a4 4 0 0 1 0 8M22 21v-2a4 4 0 0 0-3-4"/></svg></div>
+        <h3>Готовая аудитория</h3>
         <p>7000+ верифицированных пользователей экосистемы Libermall. Они уже знают что такое Libermall ID.</p>
       </div>
-      <div class="card">
-        <h3>⚡ Конверсия в регистрацию</h3>
-        <p>Один клик в Telegram вместо формы с email/password/captcha. Конверсия в 3–5× выше типичной.</p>
-      </div>
-      <div class="card">
-        <h3>🎯 Cross-product данные</h3>
-        <p>Вы знаете контекст: какие сайты пользователь оценил, какие монеты держит. Лучше персонализация.</p>
+      <div class="why-card">
+        <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/></svg></div>
+        <h3>Контекст пользователя</h3>
+        <p>TON-кошельки, отзывы, рейтинг трейдера — переходят с пользователем. Лучше персонализация.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section" style="background:#fff;">
+<!-- ─── 3 steps ─── -->
+<section class="section" style="padding-top:0;">
   <div class="container">
-    <div class="cta-strip" style="margin:0;">
-      <h2>Готовы начать?</h2>
+    <span class="section-eyebrow">Steps</span>
+    <h2 class="section-title">3 шага до интеграции</h2>
+
+    <div class="why-grid" style="margin-top:24px;">
+      <div class="why-text"></div>
+      <div class="why-card">
+        <div class="ico" style="background:var(--primary);color:#0A0A0C;font-weight:700;">1</div>
+        <h3>Запросите OAuth client</h3>
+        <p>Напишите на <a href="mailto:hello@libermall.com">hello@libermall.com</a> — пришлите название, URL, redirect_uri. Получите client_id и client_secret в течение суток.</p>
+      </div>
+      <div class="why-card">
+        <div class="ico" style="background:var(--primary);color:#0A0A0C;font-weight:700;">2</div>
+        <h3>Подключите OIDC SDK</h3>
+        <p>Готовые примеры для Laravel, Next.js, Node, Python в <a href="/developers.html">документации</a>. Стандартный OpenID Connect — работает с любым OIDC-клиентом.</p>
+      </div>
+      <div class="why-card">
+        <div class="ico" style="background:var(--primary);color:#0A0A0C;font-weight:700;">3</div>
+        <h3>Добавьте кнопку</h3>
+        <p>Брендированный snippet HTML/CSS — копируете в <a href="/developers.html#button">developers/button</a>. Юзеры экосистемы войдут одним кликом.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Live integration showcase ─── -->
+<section class="section" style="padding-top:0;">
+  <div class="container">
+    <span class="section-eyebrow">Live integrations</span>
+    <h2 class="section-title">Кто уже принимает Libermall ID</h2>
+    <p class="section-lead">6 продуктов экосистемы Libermall и внешние партнёры.</p>
+
+    <div class="trusted-logos" style="opacity:1;margin-top:24px;">
+      <a href="https://sites.reviews" class="trusted-logo"><span class="lico" style="background:#2A7BFF;">SR</span>Sites.Reviews</a>
+      <a href="https://tonchat.ai" class="trusted-logo"><span class="lico" style="background:#22C55E;">TC</span>TonChat AI</a>
+      <a href="https://ton.ceo" class="trusted-logo"><span class="lico" style="background:#0098EA;">M</span>TON.CEO</a>
+      <a href="https://dex.libermall.com" class="trusted-logo"><span class="lico" style="background:#FFD60A;color:#0A0A0C;">D</span>Libermall DEX</a>
+      <a href="https://card.libermall.com" class="trusted-logo"><span class="lico" style="background:#3B82F6;">C</span>Libermall Card</a>
+      <a href="https://libermall.com" class="trusted-logo"><span class="lico" style="background:#A855F7;">L</span>Marketplace</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Pricing ─── -->
+<section class="section" style="padding-top:0;">
+  <div class="container">
+    <div class="section-head-center">
+      <span class="section-eyebrow">Pricing</span>
+      <h2 class="section-title">Бесплатно до 10K MAU</h2>
+      <p class="section-lead">Стартовый tier для всех. Платно — только при крупных объёмах или enterprise-фичах.</p>
+    </div>
+    <div class="compare-grid">
+      <div class="compare-card">
+        <h3>Free</h3>
+        <div class="price">$0 <small>до 10K MAU</small></div>
+        <p style="color:var(--muted);font-size:13px;margin:0;">Для пилотов, стартапов, indie-проектов.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>OpenID Connect + OAuth 2.0</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>До 10 redirect URIs</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Email support</li>
+        </ul>
+        <a href="mailto:hello@libermall.com" class="btn btn-secondary" style="width:100%;">Запросить</a>
+      </div>
+      <div class="compare-card featured">
+        <div class="ribbon">Pro</div>
+        <h3>Growth</h3>
+        <div class="price">$99 <small>/ месяц</small></div>
+        <p style="color:var(--muted);font-size:13px;margin:0;">10K-100K MAU. Email + Slack support.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Всё из Free</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>До 100K MAU</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Кастомный consent screen</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Slack support</li>
+        </ul>
+        <a href="mailto:hello@libermall.com" class="btn btn-primary" style="width:100%;">Запросить</a>
+      </div>
+      <div class="compare-card">
+        <h3>Enterprise</h3>
+        <div class="price">Custom</div>
+        <p style="color:var(--muted);font-size:13px;margin:0;">SAML, SCIM, SLA, dedicated CSM.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Безлимитный MAU</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>SAML 2.0 + SCIM</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>99.9% SLA</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Dedicated CSM</li>
+        </ul>
+        <a href="mailto:hello@libermall.com" class="btn btn-secondary" style="width:100%;">Связаться</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CTA ─── -->
+<section class="section" style="padding-bottom:0;">
+  <div class="container">
+    <div class="cta-final">
+      <h2>Готовы добавить кнопку?</h2>
       <p>Напишите команде Libermall — поможем с интеграцией.</p>
-      <a href="mailto:hello@libermall.com?subject=Libermall%20ID%20integration%20request" class="btn btn-primary btn-lg">Связаться</a>
+      <div class="actions">
+        <a href="mailto:hello@libermall.com?subject=Libermall%20ID%20integration" class="btn btn-primary btn-lg">Связаться</a>
+        <a href="/developers.html" class="btn btn-secondary btn-lg">Документация</a>
+      </div>
     </div>
   </div>
 </section>
 
 <footer>
   <div class="container">
-    <div><img src="/assets/logo.svg" alt="Libermall ID" height="36" ><p style="margin-top:16px;font-size:14px;">Единая идентификация.</p></div>
-    <div><h4>Продукты</h4><ul><li><a href="https://sites.reviews">Sites.Reviews</a></li><li><a href="https://tonchat.ai">TonChat AI</a></li><li><a href="https://dex.libermall.com">DEX</a></li><li><a href="https://card.libermall.com">Card</a></li></ul></div>
+    <div><img src="/assets/logo.svg" alt="Libermall ID" height="36"><p class="desc">Identity layer для экосистемы Libermall.</p></div>
+    <div><h4>Продукт</h4><ul><li><a href="/login">Войти</a></li><li><a href="/signup">Создать аккаунт</a></li><li><a href="/products.html">Экосистема</a></li><li><a href="/about.html">О проекте</a></li></ul></div>
     <div><h4>Разработчикам</h4><ul><li><a href="/developers.html">Документация</a></li><li><a href="/integrate.html">Интегрировать</a></li><li><a href="https://github.com/DeFiTON/libermall-id">GitHub</a></li></ul></div>
-    <div><h4>Юридическое</h4><ul><li><a href="/about.html">О проекте</a></li><li><a href="/privacy.html">Приватность</a></li><li><a href="/terms.html">Условия</a></li></ul></div>
+    <div><h4>Юридическое</h4><ul><li><a href="/privacy.html">Приватность</a></li><li><a href="/terms.html">Условия</a></li><li><a href="mailto:hello@libermall.com">Контакт</a></li></ul></div>
   </div>
-  <div class="footer-bottom container">© 2026 Libermall.</div>
+  <div class="footer-bottom container"><div>© 2026 Libermall</div><div>Open source · <a href="https://github.com/DeFiTON/libermall-id">DeFiTON/libermall-id</a></div></div>
 </footer>
 
 </body>
