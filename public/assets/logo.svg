@@ -1,9 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 56" width="200" height="56">
-  <g>
-    <rect x="0" y="8" width="40" height="40" rx="10" fill="#2A7BFF"/>
-    <path d="M10 20 L18 28 L30 14" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-    <text x="52" y="35" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="700" fill="#17212B" letter-spacing="-0.5">
-      Libermall<tspan fill="#2A7BFF"> ID</tspan>
-    </text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 56" width="220" height="56">
+  <g transform="translate(0, 4)">
+    <!-- Diamond -->
+    <path d="M24 0 L48 24 L24 48 L0 24 Z" fill="#FFD60A"/>
+    <!-- Brackets / brand mark -->
+    <path d="M18 16 L12 24 L18 32" stroke="#0D0D0F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <path d="M30 16 L36 24 L30 32" stroke="#0D0D0F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
   </g>
+  <text x="60" y="36" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF" letter-spacing="-0.5">
+    Libermall <tspan font-weight="700">ID</tspan>
+  </text>
 </svg>

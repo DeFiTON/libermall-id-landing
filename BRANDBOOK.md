@@ -1,158 +1,143 @@
 # Libermall ID — Brand Book
 
-Версия 1.0 · 2026-05-24
+Версия 2.0 · 2026-05-24 · **Dark + Yellow**
 
-## Миссия и tone of voice
+## Tone of voice
 
-Libermall ID — это утилитарная инфраструктура. Не «волшебство», не «революция», а **надёжный, прозрачный, технически грамотный** сервис идентификации.
+Libermall ID — утилитарная инфраструктура. Не «волшебство», а **надёжный, прозрачный, технически грамотный** SSO-сервис.
 
 | | Yes | No |
 |---|---|---|
 | Стиль | конкретный, технический, дружелюбный | маркетинговый, восторженный |
 | Голос | «работает за 5 минут», «JWT RS256», «один аккаунт» | «изменит мир», «революционно» |
-| Примеры | «7000+ пользователей экосистемы» | «миллионы fanатов!!!» |
 
 ## Логотип
 
-### Главный лого
-Galочка (check-mark) внутри скруглённого квадрата + текстовая часть «Libermall ID».
+### Главный знак
+Ромб (diamond) с двумя угловыми скобками `<` и `>` внутри + текст «Libermall ID».
 
-- Цвет квадрата: `#2A7BFF` (primary)
-- Цвет галочки: `#FFFFFF`
-- Шрифт текста: Inter, weight 700, letter-spacing -0.5
-- Цвет «Libermall»: `#17212B` (secondary)
-- Цвет «ID»: `#2A7BFF` (accent)
-
-### Иконка (favicon)
-Только квадрат с галочкой. Размеры 40×40, 128×128.
-
-### Варианты
-- **Полноцветный** — на светлом фоне
-- **Инвертированный** — на тёмном (footer, OG-cover) — текст белый, квадрат остаётся primary
-- **Монохромный** — только для печати
+- Ромб: `#FFD60A` (primary)
+- Скобки: `#0D0D0F` (фон) — стиль кода-скобок, означает «открытое API»
+- Текст «Libermall ID»: `#FFFFFF` на тёмном фоне, `#0D0D0F` на светлом
+- Шрифт: Inter, weight 700, letter-spacing -0.5
 
 ### Запрещено
-- Изменять пропорции
-- Менять цвета (кроме официальных вариантов)
-- Удалять фон у иконки
-- Добавлять тени и градиенты
+- Менять цвета (только официальные)
+- Удалять скобки внутри ромба
+- Деформировать ромб (только пропорциональное масштабирование)
+- Использовать на shrillyellow фоне (исключает читабельность)
 
 ## Цветовая палитра
 
 ### Brand colors
 
-| Имя | HEX | RGB | Использование |
-|---|---|---|---|
-| **Primary** | `#2A7BFF` | 42, 123, 255 | CTA-кнопки, логотип, акценты |
-| **Primary-dark** | `#1E5DCE` | 30, 93, 206 | hover для primary |
-| **Secondary** | `#17212B` | 23, 33, 43 | Тёмные блоки, основной текст, footer |
-
-### Backgrounds
-
 | Имя | HEX | Использование |
 |---|---|---|
-| **BG** | `#EEF3FB` | Основной фон страниц |
-| **BG-soft** | `#F8FAFD` | Альтернативный светлый |
-| **BG-card** | `#FFFFFF` | Карточки и формы |
+| **Primary (Yellow)** | `#FFD60A` | Лого ромб, CTA-кнопки, акценты, ссылки |
+| **Primary hover** | `#FFCB1A` | hover state для primary |
+| **BG (Charcoal)** | `#0D0D0F` | Основной фон страниц |
+| **Card BG** | `#1A1A1F` | Карточки, формы, navbar |
+| **Card hover** | `#22222A` | hover state для cards |
+| **Border** | `#2A2A33` | Границы карточек |
+| **White** | `#FFFFFF` | Основной текст |
+| **Text-soft** | `#D0D0D8` | Body text |
+| **Muted** | `#6E6E78` | Captions, метаданные |
 
 ### Status colors
 
-| Имя | HEX | Использование |
-|---|---|---|
-| **Green** | `#2ECC71` | Success, верификация, надёжность |
-| **Orange** | `#FFB02E` | Warning, средний риск, звёзды |
-| **Red** | `#EF4444` | Error, high risk, негатив |
-
-### Text
-
-| Имя | HEX | Использование |
-|---|---|---|
-| **Text** | `#17212B` | Основной текст |
-| **Muted** | `#64748B` | Вторичный, lead-параграф, footer-text |
-| **Border** | `#E5EAF1` | Границы карточек, hr |
+| Имя | HEX |
+|---|---|
+| **Green** | `#2ECC71` |
+| **Orange** | `#FFB02E` |
+| **Red** | `#EF4444` |
 
 ## Типографика
 
-### Шрифты
-- **Основной:** [Inter](https://fonts.google.com/specimen/Inter) — weights 400, 500, 600, 700
-- **Монo (код):** [JetBrains Mono](https://www.jetbrains.com/lp/mono/) — 400, 500
-- **Fallback:** `-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif`
+- **Inter** — основной (400, 500, 600, 700)
+- **JetBrains Mono** — для кода
+- **Fallback:** `-apple-system, BlinkMacSystemFont, sans-serif`
 
 ### Шкала
 
-| Класс | Size | Weight | Letter-spacing | Использование |
-|---|---|---|---|---|
-| H1 (hero) | `clamp(2.4rem, 5vw, 3.6rem)` | 700 | -0.04em | Главные заголовки |
-| H1 (article) | 2.4rem | 700 | -0.02em | Заголовки страниц |
-| H2 | 2.2rem | 700 | -0.02em | Section titles |
-| H3 | 1.2rem | 600 | 0 | Card titles |
-| H4 | 0.9rem | 600 | 0.04em | Footer headers (UPPERCASE) |
-| Body | 1rem | 400 | 0 | Основной текст |
-| Lead | 1.25rem | 400 | 0 | Lead-параграф |
-| Small | 0.875rem | 400 | 0 | Captions, метаданные |
-| Code | 0.9em | 400 | 0 | inline `code` блоки |
+| Класс | Size | Weight | Letter-spacing |
+|---|---|---|---|
+| H1 (hero) | `clamp(2.4rem, 4.5vw, 4rem)` | 700 | -0.03em |
+| H1 (article) | 2.4rem | 700 | -0.02em |
+| H2 | 2rem | 700 | -0.02em |
+| H3 | 1.2rem | 600 | 0 |
+| H4 | 0.85rem | 600 | 0.06em (UPPERCASE) |
+| Body | 1rem | 400 | 0 |
+| Lead | 1.1rem | 400 | 0 |
 
 ### Line-height
 - Body: 1.6
-- Headings: 1.1–1.2
+- Headings: 1.05–1.2
 
 ## Компоненты
 
 ### Button-primary
-- Background: `#2A7BFF` → hover `#1E5DCE`
-- Color: `#FFFFFF`
+- Background: `#FFD60A` → hover `#FFCB1A`
+- Color: `#0D0D0F` (чёрный текст на жёлтом)
 - Padding: `14px 28px`
 - Border-radius: `12px`
 - Font-weight: 600
 
-### Button-outline
-- Background: transparent → hover `#FFFFFF`
-- Border: 1px solid `#E5EAF1` → hover `#2A7BFF`
-- Color: `#17212B` → hover `#2A7BFF`
+### Button-secondary
+- Background: `#1A1A1F`
+- Border: 1px solid `#2A2A33` → hover `#FFD60A`
+- Color: `#FFFFFF` → hover `#FFD60A`
 
 ### Card
-- Background: `#FFFFFF`
-- Border: 1px solid `#E5EAF1`
+- Background: `#1A1A1F`
+- Border: 1px solid `#2A2A33`
 - Border-radius: `20px`
 - Padding: `32px`
-- Hover: `translateY(-2px)` + shadow
+- Hover: `translateY(-2px)` + `border-color: #FFD60A`
 
 ### Input
-- Background: `#FFFFFF`
-- Border: 1px solid `#E5EAF1`
+- Background: `#0D0D0F`
+- Border: 1px solid `#2A2A33`
 - Border-radius: `10px`
 - Padding: `12px 16px`
-- Focus: border `#2A7BFF`, shadow `0 0 0 3px rgba(42,123,255,0.15)`
+- Focus: border `#FFD60A`, shadow `0 0 0 3px rgba(255,214,10,0.15)`
+- Placeholder: `#6E6E78`
 
 ## Иконография
 
 - Стиль: outline (stroke 2px), скруглённые концы
-- Источник: [Lucide](https://lucide.dev) или Bootstrap Icons
-- Размер default: 16px (inline), 20px (in buttons), 24px (standalone), 48px (cards)
-- Цвет: наследует от parent (`currentColor`)
+- Источник: Lucide или Bootstrap Icons
+- Размер: 16 (inline), 20 (button), 24 (standalone), 36 (cards)
+- Цвет: `currentColor` (наследует) или `#FFD60A` для акцентов
 
-## Гайдлайны для маркетинга
+## Контент-блоки
 
-### OpenGraph cover (1200×630)
-- Фон: light gradient `#EEF3FB → #FFFFFF`
-- Лого в углу: large quad + check-mark
-- Title: Inter 68px bold
+### Hero illustration
+- Полупрозрачный glow `radial-gradient(rgba(255,214,10,0.06)...)`
+- Floating product cards (анимация `floaty` 6s)
+- Dashboard mock с тёмными background
+
+### Stats bar
+- 6 счётчиков: пользователи / аккаунты / верифицированные / продукты / uptime / поддержка
+- Цвет иконок: `#FFD60A`
+
+### Integration strip
+- 4 протокола в боксах: OpenID Connect, OAuth 2.0, SAML 2.0, SDK
+- Каждый с цветным significantly жёлтым icon
+
+## OpenGraph cover (1200×630)
+- Фон `#0D0D0F` с decorative orbs `rgba(255,214,10, 0.06)`
+- Логотип-ромб 140×140 слева
+- Title: Inter 64px white
 - Subtitle: Inter 32px primary
-- Brand line: «id.libermall.com» внизу
-
-### Social posts
-- Брендовый шаблон: квадрат 1080×1080 или вертикаль 1080×1920
-- Лого вверху-слева
-- Plain background `#EEF3FB`
-- Acentный текст — primary
-- Body text — secondary
+- Brand line: «id.libermall.com» внизу muted
 
 ## Файлы
 
-- `public/assets/logo.svg` — полный лого
-- `public/favicon.svg` — иконка
-- `public/assets/og-cover.svg` — OG-cover (рендерить в PNG через rsvg-convert при необходимости)
+- `public/assets/logo.svg` — главный лого (white text)
+- `public/favicon.svg` — diamond-only иконка
+- `public/assets/og-cover.svg` — OG cover 1200×630 (dark)
 
-## Использование
+## История версий
 
-При создании любых маркетинговых материалов Libermall ID — следовать этому гайду. Сомнения — спросить через PR-issue в [DeFiTON/libermall-id-landing](https://github.com/DeFiTON/libermall-id-landing).
+- **v2.0** (2026-05-24) — Dark + Yellow re-brand (по мокапу). Diamond logo с brackets. Primary `#FFD60A` (вместо `#2A7BFF`)
+- **v1.0** (2026-05-24) — Initial light theme с primary `#2A7BFF`
