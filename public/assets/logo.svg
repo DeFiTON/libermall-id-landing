@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 56" width="200" height="56">
+  <g>
+    <rect x="0" y="8" width="40" height="40" rx="10" fill="#2A7BFF"/>
+    <path d="M10 20 L18 28 L30 14" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="52" y="35" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="700" fill="#17212B" letter-spacing="-0.5">
+      Libermall<tspan fill="#2A7BFF"> ID</tspan>
+    </text>
+  </g>
+</svg>

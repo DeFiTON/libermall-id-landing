@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Libermall ID — Один аккаунт для всей экосистемы</title>
+<meta name="description" content="Libermall ID — единая система входа для Sites.Reviews, TonChat AI, TON.CEO, DEX и Card. Один аккаунт, Telegram-вход, OpenID Connect, SAML.">
+<link rel="canonical" href="https://id.libermall.com/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Libermall ID — Один аккаунт для всей экосистемы">
+<meta property="og:description" content="Единый Single Sign-On для всех продуктов Libermall. Telegram-вход, TON Connect, OpenID Connect.">
+<meta property="og:url" content="https://id.libermall.com/">
+<meta property="og:site_name" content="Libermall ID">
+<meta property="og:image" content="https://id.libermall.com/assets/og-cover.svg">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Libermall ID — Один аккаунт для всей экосистемы">
+<meta name="twitter:description" content="Единый Single Sign-On для всех продуктов Libermall.">
+<meta name="twitter:image" content="https://id.libermall.com/assets/og-cover.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://id.libermall.com/#org",
+      "name": "Libermall ID",
+      "url": "https://id.libermall.com/",
+      "logo": "https://id.libermall.com/assets/logo.svg",
+      "sameAs": [
+        "https://libermall.com",
+        "https://sites.reviews",
+        "https://dex.libermall.com",
+        "https://card.libermall.com"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://id.libermall.com/#website",
+      "url": "https://id.libermall.com/",
+      "name": "Libermall ID",
+      "publisher": { "@id": "https://id.libermall.com/#org" },
+      "inLanguage": "ru-RU"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Libermall ID",
+      "operatingSystem": "Web",
+      "applicationCategory": "AuthenticationApplication",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "RUB" },
+      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5", "ratingCount": "1" }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="/" class="nav-logo" aria-label="Libermall ID">
+      <img src="/assets/logo.svg" alt="Libermall ID" height="36">
+    </a>
+    <button class="nav-toggle" aria-label="Меню" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg>
+    </button>
+    <div class="nav-links">
+      <a href="/products.html">Продукты</a>
+      <a href="/developers.html">Разработчикам</a>
+      <a href="/about.html">О проекте</a>
+      <a href="/login" class="nav-cta">Войти</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container hero-inner">
+    <h1>Один аккаунт для <span class="accent">всей экосистемы</span></h1>
+    <p class="lead">Libermall ID — единый Single Sign-On для Sites.Reviews, TonChat AI, TON.CEO, DEX, Card и Marketplace. Войдите один раз — пользуйтесь везде.</p>
+    <div class="hero-actions">
+      <a href="/signup" class="btn btn-primary btn-lg">Создать аккаунт</a>
+      <a href="/login" class="btn btn-outline btn-lg">У меня уже есть</a>
+    </div>
+  </div>
+</header>
+
+<section class="section" style="background:#fff;">
+  <div class="container">
+    <h2 class="section-title">Зачем нужен Libermall ID</h2>
+    <p class="section-lead">Каждый продукт экосистемы Libermall больше не требует отдельной регистрации. Один аккаунт — всё под рукой.</p>
+    <div class="grid grid-3">
+      <div class="card">
+        <div class="card-icon primary">⚡</div>
+        <h3>Мгновенный вход</h3>
+        <p>Telegram, TON Connect, email или social — выберите удобный способ. Без паролей, без писем подтверждения.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon green">🔐</div>
+        <h3>Безопасность</h3>
+        <p>Industry-standard OpenID Connect, OAuth 2.0, SAML. Двухфакторная аутентификация, audit log, encryption.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon orange">🌐</div>
+        <h3>Кросс-продуктовый профиль</h3>
+        <p>TON-кошельки, отзывы, рейтинг трейдера, накопления на Card — единая история активности.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Продукты экосистемы</h2>
+    <p class="section-lead">Каждый из этих сервисов принимает Libermall ID. Подключайте свои аккаунты в один клик.</p>
+    <div class="grid grid-6">
+      <a href="https://sites.reviews" class="product">
+        <svg class="product-logo" viewBox="0 0 40 40"><path d="M9 3h22a6 6 0 0 1 6 6v16a6 6 0 0 1-6 6H17l-7 7v-7H9a6 6 0 0 1-6-6V9a6 6 0 0 1 6-6Z" fill="#2A7BFF"/><path d="M12 17.5l5.5 5.5L29 11.5" stroke="#fff" stroke-width="4.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        <div class="product-name">Sites.Reviews</div>
+        <div class="product-desc">Каталог отзывов</div>
+      </a>
+      <a href="https://tonchat.ai" class="product">
+        <svg class="product-logo" viewBox="0 0 40 40"><rect width="40" height="40" rx="10" fill="#0098EA"/><text x="20" y="27" text-anchor="middle" font-family="Inter,sans-serif" font-size="18" font-weight="700" fill="#fff">TC</text></svg>
+        <div class="product-name">TonChat AI</div>
+        <div class="product-desc">AI-помощник</div>
+      </a>
+      <a href="https://ton.ceo" class="product">
+        <svg class="product-logo" viewBox="0 0 40 40"><rect width="40" height="40" rx="10" fill="#6364FF"/><text x="20" y="27" text-anchor="middle" font-family="Inter,sans-serif" font-size="18" font-weight="700" fill="#fff">M</text></svg>
+        <div class="product-name">TON.CEO</div>
+        <div class="product-desc">Mastodon-сеть</div>
+      </a>
+      <a href="https://dex.libermall.com" class="product">
+        <svg class="product-logo" viewBox="0 0 40 40"><rect width="40" height="40" rx="10" fill="#2ECC71"/><text x="20" y="27" text-anchor="middle" font-family="Inter,sans-serif" font-size="18" font-weight="700" fill="#fff">DEX</text></svg>
+        <div class="product-name">Libermall DEX</div>
+        <div class="product-desc">Биржа на TON</div>
+      </a>
+      <a href="https://card.libermall.com" class="product">
+        <svg class="product-logo" viewBox="0 0 40 40"><rect width="40" height="40" rx="10" fill="#FFB02E"/><text x="20" y="27" text-anchor="middle" font-family="Inter,sans-serif" font-size="18" font-weight="700" fill="#fff">$</text></svg>
+        <div class="product-name">Libermall Card</div>
+        <div class="product-desc">Виртуальные карты</div>
+      </a>
+      <a href="https://libermall.com" class="product">
+        <svg class="product-logo" viewBox="0 0 40 40"><rect width="40" height="40" rx="10" fill="#17212B"/><text x="20" y="27" text-anchor="middle" font-family="Inter,sans-serif" font-size="18" font-weight="700" fill="#fff">L</text></svg>
+        <div class="product-name">Marketplace</div>
+        <div class="product-desc">Маркетплейс</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:#fff;">
+  <div class="container">
+    <h2 class="section-title">Как это работает</h2>
+    <p class="section-lead">Знакомый поток OAuth 2.0 / OpenID Connect — никаких сюрпризов для разработчиков.</p>
+    <div class="grid grid-3">
+      <div class="card">
+        <div class="card-icon">1</div>
+        <h3>Регистрация</h3>
+        <p>На любом сайте экосистемы нажмите «Войти через Libermall ID». Выберите Telegram или TON-кошелёк.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">2</div>
+        <h3>Один клик</h3>
+        <p>Подтвердите вход одним тапом в Telegram. Libermall ID создаст ваш профиль автоматически.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">3</div>
+        <h3>Везде в экосистеме</h3>
+        <p>Этот же аккаунт работает на всех сайтах Libermall — без повторных регистраций.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="cta-strip">
+      <h2>Подключаете свой сервис?</h2>
+      <p>Стандартный OpenID Connect + готовые SDK для Laravel, Next.js, Node.</p>
+      <a href="/developers.html" class="btn btn-primary btn-lg">Документация для разработчиков</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div>
+      <div class="footer-logo">
+        <img src="/assets/logo.svg" alt="Libermall ID" height="36" style="filter:brightness(0) invert(1);">
+      </div>
+      <p style="margin-top:16px;font-size:14px;color:#94A3B8;">Единая идентификация для экосистемы Libermall.</p>
+    </div>
+    <div>
+      <h4>Продукты</h4>
+      <ul>
+        <li><a href="https://sites.reviews">Sites.Reviews</a></li>
+        <li><a href="https://tonchat.ai">TonChat AI</a></li>
+        <li><a href="https://dex.libermall.com">Libermall DEX</a></li>
+        <li><a href="https://card.libermall.com">Libermall Card</a></li>
+        <li><a href="https://libermall.com">Marketplace</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Разработчикам</h4>
+      <ul>
+        <li><a href="/developers.html">Документация</a></li>
+        <li><a href="/integrate.html">Интегрировать вход</a></li>
+        <li><a href="https://github.com/DeFiTON/libermall-id">GitHub</a></li>
+        <li><a href="/.well-known/openid-configuration">OIDC discovery</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Юридическое</h4>
+      <ul>
+        <li><a href="/about.html">О проекте</a></li>
+        <li><a href="/privacy.html">Приватность</a></li>
+        <li><a href="/terms.html">Условия</a></li>
+        <li><a href="mailto:hello@libermall.com">Контакт</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom container">© 2026 Libermall. Все права защищены.</div>
+</footer>
+
+</body>
+</html>

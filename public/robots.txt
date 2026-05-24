@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /login
+Disallow: /signup
+Disallow: /callback
+Disallow: /cb
+
+Sitemap: https://id.libermall.com/sitemap.xml

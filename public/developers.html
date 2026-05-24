@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Разработчикам — Libermall ID</title>
+<meta name="description" content="Документация Libermall ID: OpenID Connect, OAuth 2.0, SDK для Laravel, Next.js, Node.">
+<link rel="canonical" href="https://id.libermall.com/developers.html">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Libermall ID для разработчиков">
+<meta property="og:description" content="Подключите Libermall ID к своему сервису за 5 минут. OIDC + готовые SDK.">
+<meta property="og:url" content="https://id.libermall.com/developers.html">
+<meta property="og:image" content="https://id.libermall.com/assets/og-cover.svg">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+<style>
+  article.long pre, article.long code { font-family: 'JetBrains Mono', Menlo, monospace; }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="/" class="nav-logo"><img src="/assets/logo.svg" alt="Libermall ID" height="36"></a>
+    <button class="nav-toggle" aria-label="Меню" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg>
+    </button>
+    <div class="nav-links">
+      <a href="/products.html">Продукты</a>
+      <a href="/developers.html">Разработчикам</a>
+      <a href="/about.html">О проекте</a>
+      <a href="/login" class="nav-cta">Войти</a>
+    </div>
+  </div>
+</nav>
+
+<article class="long">
+  <div class="container-narrow">
+    <h1>Libermall ID для разработчиков</h1>
+    <p class="article-lead">Подключите единый вход к своему сервису за 5 минут. Стандартный OpenID Connect — никакого vendor lock-in.</p>
+
+    <div class="toc">
+      <h4>Содержание</h4>
+      <a href="#endpoints">Endpoints</a>
+      <a href="#oauth-flow">OAuth 2.0 / OIDC flow</a>
+      <a href="#laravel">SDK для Laravel</a>
+      <a href="#nextjs">SDK для Next.js</a>
+      <a href="#node">SDK для Node / Express</a>
+      <a href="#claims">Claims в id_token</a>
+      <a href="#scopes">Scopes</a>
+      <a href="#register">Регистрация приложения</a>
+    </div>
+
+    <h2 id="endpoints">Endpoints</h2>
+    <p>Все endpoints находятся под <code>https://id.libermall.com</code>:</p>
+    <pre><code>OpenID discovery:    /.well-known/openid-configuration
+Authorize:           /login/oauth/authorize
+Token:               /api/login/oauth/access_token
+UserInfo:            /api/userinfo
+JWKS:                /.well-known/jwks
+Logout:              /api/logout</code></pre>
+
+    <h2 id="oauth-flow">OAuth 2.0 / OIDC flow</h2>
+    <p>Стандартный Authorization Code flow с PKCE:</p>
+    <pre><code>1. Пользователь нажимает «Войти через Libermall ID» на вашем сайте
+2. Редирект на /login/oauth/authorize?response_type=code&amp;client_id=...&amp;redirect_uri=...&amp;state=...&amp;scope=openid+profile+email
+3. Casdoor показывает форму, юзер логинится (Telegram, TON, email)
+4. Casdoor редиректит обратно на ваш redirect_uri с ?code=&amp;state=
+5. Ваш сервер обменивает code на access_token через POST /api/login/oauth/access_token
+6. Получаете userinfo через GET /api/userinfo с Bearer токеном</code></pre>
+
+    <h2 id="laravel">SDK для Laravel</h2>
+    <p>Полный пример: <a href="https://github.com/DeFiTON/libermall-id/tree/main/integration-examples/laravel">github.com/DeFiTON/libermall-id/tree/main/integration-examples/laravel</a></p>
+    <pre><code>composer require laravel/socialite socialiteproviders/generic-oauth2
+
+// config/services.php
+'libermall' => [
+    'host' => env('LIBERMALL_ID_HOST', 'https://id.libermall.com'),
+    'client_id' => env('LIBERMALL_ID_CLIENT_ID'),
+    'client_secret' => env('LIBERMALL_ID_CLIENT_SECRET'),
+    'redirect' => env('APP_URL') . '/oauth/libermall/callback',
+],
+
+// routes/web.php
+Route::get('/oauth/libermall', fn() => Socialite::driver('libermall')->redirect());
+Route::get('/oauth/libermall/callback', [LibermallController::class, 'callback']);</code></pre>
+
+    <h2 id="nextjs">SDK для Next.js</h2>
+    <p>NextAuth.js с Custom Provider:</p>
+    <pre><code>// pages/api/auth/[...nextauth].js
+import NextAuth from 'next-auth';
+
+export default NextAuth({
+  providers: [
+    {
+      id: 'libermall',
+      name: 'Libermall ID',
+      type: 'oauth',
+      wellKnown: 'https://id.libermall.com/.well-known/openid-configuration',
+      authorization: { params: { scope: 'openid profile email' } },
+      idToken: true,
+      checks: ['pkce', 'state'],
+      profile(p) { return { id: p.sub, name: p.name, email: p.email }; },
+      clientId: process.env.LIBERMALL_CLIENT_ID,
+      clientSecret: process.env.LIBERMALL_CLIENT_SECRET,
+    },
+  ],
+});</code></pre>
+
+    <h2 id="node">SDK для Node / Express</h2>
+    <pre><code>npm install openid-client passport passport-openidconnect
+
+// index.js
+const { Issuer, Strategy } = require('openid-client');
+const passport = require('passport');
+
+(async () =&gt; {
+  const issuer = await Issuer.discover('https://id.libermall.com/.well-known/openid-configuration');
+  const client = new issuer.Client({
+    client_id: process.env.LIBERMALL_CLIENT_ID,
+    client_secret: process.env.LIBERMALL_CLIENT_SECRET,
+    redirect_uris: ['https://yourapp.com/auth/callback'],
+    response_types: ['code'],
+  });
+  passport.use('libermall', new Strategy({ client }, (tokenset, done) =&gt; done(null, tokenset.claims())));
+})();</code></pre>
+
+    <h2 id="claims">Claims в id_token</h2>
+    <pre><code>{
+  "iss": "https://id.libermall.com",
+  "aud": "your_client_id",
+  "sub": "uuid-of-user",
+  "preferred_username": "sviatoslav",
+  "name": "Sviatoslav Gusev",
+  "email": "user@example.com",
+  "email_verified": true,
+  "picture": "https://t.me/i/userpic/320/...",
+  "tg_id": 12345678,
+  "tg_username": "defiton",
+  "wallets": [{ "chain": "ton", "address": "EQ..." }]
+}</code></pre>
+
+    <h2 id="scopes">Scopes</h2>
+    <ul>
+      <li><code>openid</code> — обязательный для OIDC, возвращает <code>sub</code></li>
+      <li><code>profile</code> — name, preferred_username, picture, tg_id, tg_username</li>
+      <li><code>email</code> — email, email_verified</li>
+      <li><code>wallets</code> — массив привязанных TON-кошельков</li>
+      <li><code>offline_access</code> — refresh_token для долгих сессий</li>
+    </ul>
+
+    <h2 id="register">Регистрация приложения</h2>
+    <p>Пока ручной процесс. Напишите на <a href="mailto:hello@libermall.com">hello@libermall.com</a> с информацией:</p>
+    <ul>
+      <li>Название и URL вашего сервиса</li>
+      <li>Список redirect URIs</li>
+      <li>Нужны ли scopes <code>wallets</code> / <code>quests</code></li>
+    </ul>
+    <p>В ответ получите <code>client_id</code> + <code>client_secret</code>.</p>
+
+    <h2>Поддержка</h2>
+    <p>Issues и feature requests: <a href="https://github.com/DeFiTON/libermall-id/issues">GitHub Issues</a>.</p>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <div><img src="/assets/logo.svg" alt="Libermall ID" height="36" style="filter:brightness(0) invert(1);"><p style="margin-top:16px;font-size:14px;">Единая идентификация.</p></div>
+    <div><h4>Продукты</h4><ul><li><a href="https://sites.reviews">Sites.Reviews</a></li><li><a href="https://tonchat.ai">TonChat AI</a></li><li><a href="https://dex.libermall.com">DEX</a></li><li><a href="https://card.libermall.com">Card</a></li></ul></div>
+    <div><h4>Разработчикам</h4><ul><li><a href="/developers.html">Документация</a></li><li><a href="/integrate.html">Интегрировать</a></li><li><a href="https://github.com/DeFiTON/libermall-id">GitHub</a></li></ul></div>
+    <div><h4>Юридическое</h4><ul><li><a href="/about.html">О проекте</a></li><li><a href="/privacy.html">Приватность</a></li><li><a href="/terms.html">Условия</a></li></ul></div>
+  </div>
+  <div class="footer-bottom container">© 2026 Libermall.</div>
+</footer>
+
+</body>
+</html>

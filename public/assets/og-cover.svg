@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EEF3FB"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="100" cy="60" r="220" fill="#2A7BFF" opacity="0.10"/>
+  <circle cx="1100" cy="580" r="200" fill="#2ECC71" opacity="0.08"/>
+
+  <g transform="translate(80, 200)">
+    <rect width="120" height="120" rx="28" fill="#2A7BFF"/>
+    <path d="M30 60 L54 84 L90 42" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <text x="240" y="270" font-family="Inter, system-ui, sans-serif" font-size="68" font-weight="700" fill="#17212B" letter-spacing="-2">Libermall ID</text>
+  <text x="240" y="335" font-family="Inter, system-ui, sans-serif" font-size="32" font-weight="500" fill="#2A7BFF">Один аккаунт для всей экосистемы</text>
+  <text x="240" y="395" font-family="Inter, system-ui, sans-serif" font-size="22" fill="#64748B">Sites.Reviews · TonChat AI · TON.CEO · DEX · Card · Marketplace</text>
+
+  <text x="80" y="580" font-family="Inter, system-ui, sans-serif" font-size="16" fill="#94A3B8">id.libermall.com</text>
+</svg>

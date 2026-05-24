@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>О проекте — Libermall ID</title>
+<meta name="description" content="Libermall ID — единая система идентификации для экосистемы Libermall. История, миссия, технологии.">
+<link rel="canonical" href="https://id.libermall.com/about.html">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="О проекте Libermall ID">
+<meta property="og:description" content="Миссия и архитектура единого SSO Libermall.">
+<meta property="og:url" content="https://id.libermall.com/about.html">
+<meta property="og:image" content="https://id.libermall.com/assets/og-cover.svg">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="/" class="nav-logo"><img src="/assets/logo.svg" alt="Libermall ID" height="36"></a>
+    <button class="nav-toggle" aria-label="Меню" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg>
+    </button>
+    <div class="nav-links">
+      <a href="/products.html">Продукты</a>
+      <a href="/developers.html">Разработчикам</a>
+      <a href="/about.html">О проекте</a>
+      <a href="/login" class="nav-cta">Войти</a>
+    </div>
+  </div>
+</nav>
+
+<article class="long">
+  <div class="container-narrow">
+    <h1>О проекте Libermall ID</h1>
+    <p class="article-lead">Единая идентификация для всех продуктов экосистемы Libermall — от каталога отзывов до криптобиржи.</p>
+
+    <h2>Зачем мы это делаем</h2>
+    <p>Экосистема Libermall — это сеть из взаимосвязанных продуктов: маркетплейс, биржа, виртуальные карты, каталог отзывов, AI-сервисы. Каждый из них работает лучше когда знает контекст пользователя — какие сайты вы любите, какие монеты держите, какой рейтинг как трейдера. До Libermall ID каждый сервис вёл свою отдельную базу аккаунтов — и связи между ними рвались.</p>
+    <p>Libermall ID решает эту фрагментацию: один профиль работает везде, история переносится между продуктами, не нужно регистрироваться по сто раз.</p>
+
+    <h2>Технологии</h2>
+    <ul>
+      <li><strong>OpenID Connect 1.0</strong> — стандарт identity layer поверх OAuth 2.0</li>
+      <li><strong>OAuth 2.0</strong> — для авторизации сторонних приложений</li>
+      <li><strong>SAML 2.0</strong> — для корпоративной интеграции</li>
+      <li><strong>JWT</strong> с RS256 для подписи токенов (4096-bit ключ)</li>
+      <li><strong>Telegram Login Widget</strong> + <strong>TON Connect v2</strong> как identity providers</li>
+      <li><strong>WebAuthn / Passkeys</strong> для passwordless 2FA</li>
+    </ul>
+
+    <h2>Архитектура</h2>
+    <p>В основе — <a href="https://casdoor.org">Casdoor</a> (open-source, BSD 3-Clause), индустриальный identity server, спонсируемый Casbin Foundation. Поверх него — наш брендированный UI и собственные адаптеры для Telegram и TON Connect.</p>
+    <p>Сервер развёрнут на изолированном VPS в Frankfurt с автоматическим обновлением SSL через Let's Encrypt и daily бэкапами.</p>
+
+    <h2>Open Source</h2>
+    <p>Большая часть инфраструктуры открыта: <a href="https://github.com/DeFiTON/libermall-id">github.com/DeFiTON/libermall-id</a>. Документация, deploy-скрипты, integration-examples — всё там.</p>
+
+    <h2>Дорожная карта</h2>
+    <ul>
+      <li><strong>Phase 1</strong> ✅ — деплой Casdoor, домен, SSL</li>
+      <li><strong>Phase 2</strong> ✅ — Telegram provider, первый OAuth-клиент (Sites.Reviews)</li>
+      <li><strong>Phase 3</strong> — TON Connect provider, личный кабинет, брендированный UI</li>
+      <li><strong>Phase 4</strong> — NFT-имена <code>@handle.lbm</code> через смарт-контракт на TON</li>
+      <li><strong>Phase 5</strong> — Cross-product рейтинги трейдеров, вишлисты на маркетплейсе</li>
+    </ul>
+
+    <h2>Команда и контакты</h2>
+    <p>Проект ведёт команда <a href="https://libermall.com">Libermall</a>. Контакт: <a href="mailto:hello@libermall.com">hello@libermall.com</a>.</p>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <div><img src="/assets/logo.svg" alt="Libermall ID" height="36" style="filter:brightness(0) invert(1);"><p style="margin-top:16px;font-size:14px;">Единая идентификация для Libermall.</p></div>
+    <div><h4>Продукты</h4><ul><li><a href="https://sites.reviews">Sites.Reviews</a></li><li><a href="https://tonchat.ai">TonChat AI</a></li><li><a href="https://dex.libermall.com">DEX</a></li><li><a href="https://card.libermall.com">Card</a></li></ul></div>
+    <div><h4>Разработчикам</h4><ul><li><a href="/developers.html">Документация</a></li><li><a href="/integrate.html">Интегрировать</a></li><li><a href="https://github.com/DeFiTON/libermall-id">GitHub</a></li></ul></div>
+    <div><h4>Юридическое</h4><ul><li><a href="/about.html">О проекте</a></li><li><a href="/privacy.html">Приватность</a></li><li><a href="/terms.html">Условия</a></li></ul></div>
+  </div>
+  <div class="footer-bottom container">© 2026 Libermall.</div>
+</footer>
+
+</body>
+</html>
