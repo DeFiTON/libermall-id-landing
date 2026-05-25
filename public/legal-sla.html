@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SLA — Libermall ID Enterprise</title>
-<meta name="description" content="Service Level Agreement Libermall ID для enterprise-клиентов. 99.9% uptime, credit-back policy.">
+<meta name="description" content="Libermall ID Service Level Agreement for enterprise customers. 99.9% uptime, credit-back policy.">
 <link rel="canonical" href="https://id.libermall.com/legal-sla.html">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"><meta name="theme-color" content="#0A0A0C">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/style.css">
 <meta property="og:title" content="SLA — Libermall ID Enterprise">
-<meta property="og:description" content="Service Level Agreement Libermall ID для enterprise-клиентов. 99.9% uptime, credit-back policy.">
+<meta property="og:description" content="Libermall ID Service Level Agreement for enterprise customers. 99.9% uptime, credit-back policy.">
 <meta property="og:url" content="https://id.libermall.com/legal-sla.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Libermall ID">
 <meta property="og:image" content="https://id.libermall.com/assets/og-cover.svg">
-<meta property="og:locale" content="ru_RU">
+<meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="SLA — Libermall ID Enterprise">
-<meta name="twitter:description" content="Service Level Agreement Libermall ID для enterprise-клиентов. 99.9% uptime, credit-back policy.">
+<meta name="twitter:description" content="Libermall ID Service Level Agreement for enterprise customers. 99.9% uptime, credit-back policy.">
 <meta name="twitter:image" content="https://id.libermall.com/assets/og-cover.svg">
 <script type="application/ld+json">
 {
@@ -30,7 +30,7 @@
       "url": "https://id.libermall.com/legal-sla.html",
       "name": "SLA",
       "isPartOf": {"@id": "https://id.libermall.com/#website"},
-      "inLanguage": "ru-RU"
+      "inLanguage": "en-US"
     },
     {
       "@type": "BreadcrumbList",
@@ -45,24 +45,24 @@
 </head>
 <body>
 
-<nav class="nav"><div class="container nav-inner"><a href="/" class="nav-logo"><img src="/assets/logo.svg" alt="Libermall ID" height="36"></a><div class="nav-links"><a href="/products.html">Продукты</a><a href="/developers.html">Разработчикам</a><a href="/about.html">О проекте</a></div><div class="nav-actions"><a href="/login.html" class="btn btn-ghost">Войти</a><a href="/signup.html" class="btn btn-primary">Создать</a></div></div></nav>
+<nav class="nav"><div class="container nav-inner"><a href="/" class="nav-logo"><img src="/assets/logo.svg" alt="Libermall ID" height="36"></a><div class="nav-links"><a href="/products.html">Products</a><a href="/developers.html">Developers</a><a href="/about.html">About</a></div><div class="nav-actions"><a href="/login.html" class="btn btn-ghost">Sign in</a><a href="/signup.html" class="btn btn-primary">Create</a></div></div></nav>
 
 <article class="long">
   <div class="container-narrow">
     <span class="eyebrow"><span class="dot"></span>Legal · Enterprise</span>
     <h1>Service Level Agreement (SLA)</h1>
-    <p class="article-lead">Эффективен с 2026-05-24. Версия 1.0. Применяется к Enterprise-плану.</p>
+    <p class="article-lead">Effective 2026-05-24. Version 1.0. Applies to the Enterprise plan.</p>
 
-    <h2>1. Уровни SLA по плану</h2>
+    <h2>1. SLA tiers by plan</h2>
     <table>
-      <tr><th>План</th><th>Uptime guarantee</th><th>Response time</th></tr>
+      <tr><th>Plan</th><th>Uptime guarantee</th><th>Response time</th></tr>
       <tr><td>Free</td><td>Best effort</td><td>Community</td></tr>
-      <tr><td>Growth</td><td>99.5%</td><td>1 рабочий день</td></tr>
-      <tr><td>Enterprise</td><td>99.9%</td><td>1 час (critical) · 4 часа (high)</td></tr>
+      <tr><td>Growth</td><td>99.5%</td><td>1 business day</td></tr>
+      <tr><td>Enterprise</td><td>99.9%</td><td>1 hour (critical) · 4 hours (high)</td></tr>
     </table>
 
-    <h2>2. Что считается downtime</h2>
-    <p>Downtime = период когда хотя бы один из критичных endpoint'ов недоступен или возвращает 5xx-ошибку более 1 минуты подряд:</p>
+    <h2>2. What counts as downtime</h2>
+    <p>Downtime = a period when at least one critical endpoint is unavailable or returns a 5xx error for more than 1 consecutive minute:</p>
     <ul>
       <li><code>/login/oauth/authorize</code></li>
       <li><code>/api/login/oauth/access_token</code></li>
@@ -70,54 +70,54 @@
       <li><code>/.well-known/openid-configuration</code></li>
     </ul>
 
-    <h2>3. Что НЕ считается downtime</h2>
+    <h2>3. What does NOT count as downtime</h2>
     <ul>
-      <li>Плановое обслуживание (с уведомлением за 7 дней)</li>
-      <li>Сбои на стороне клиента (неправильные redirect URIs, expired secrets и т.д.)</li>
-      <li>Force majeure (DDoS &gt;500 Gbps, государственные блокировки, аварии магистральных провайдеров)</li>
-      <li>Время restore после уведомлённой аварии 3rd-party (Telegram API, Cloudflare и т.д.)</li>
+      <li>Scheduled maintenance (announced 7 days in advance)</li>
+      <li>Client-side issues (wrong redirect URIs, expired secrets, etc.)</li>
+      <li>Force majeure (DDoS &gt;500 Gbps, government blocks, upstream provider outages)</li>
+      <li>Restore time after a notified 3rd-party outage (Telegram API, Cloudflare, etc.)</li>
     </ul>
 
     <h2>4. Service credits</h2>
-    <p>Если месячный uptime ниже гарантированного — credit back на следующий месяц:</p>
+    <p>If monthly uptime falls below the guarantee — credit back on the next month:</p>
     <table>
-      <tr><th>Месячный uptime</th><th>Credit (% от месячного платежа)</th></tr>
+      <tr><th>Monthly uptime</th><th>Credit (% of monthly fee)</th></tr>
       <tr><td>99.0% – 99.9%</td><td>10%</td></tr>
       <tr><td>95.0% – 99.0%</td><td>25%</td></tr>
       <tr><td>&lt; 95.0%</td><td>50%</td></tr>
-      <tr><td>&lt; 90.0%</td><td>100% + право расторжения без штрафа</td></tr>
+      <tr><td>&lt; 90.0%</td><td>100% + right to terminate without penalty</td></tr>
     </table>
 
-    <h2>5. Запрос credit'а</h2>
-    <p>Запрос подаётся в течение 30 дней после месяца с нарушением. Контакт: <a href="mailto:sla@libermall.com">sla@libermall.com</a> с указанием:</p>
+    <h2>5. Requesting a credit</h2>
+    <p>Submit a request within 30 days after the month of the breach. Contact: <a href="mailto:sla@libermall.com">sla@libermall.com</a> with:</p>
     <ul>
-      <li>Период недоступности</li>
-      <li>Затронутые endpoints</li>
-      <li>Логи / скриншоты ошибок</li>
+      <li>Period of unavailability</li>
+      <li>Affected endpoints</li>
+      <li>Logs / error screenshots</li>
     </ul>
-    <p>Решение принимается в течение 14 дней. Credit применяется к следующему биллинговому циклу.</p>
+    <p>A decision is made within 14 days. The credit is applied to the next billing cycle.</p>
 
-    <h2>6. Поддержка</h2>
+    <h2>6. Support</h2>
     <table>
-      <tr><th>Severity</th><th>Описание</th><th>Response time</th></tr>
-      <tr><td>P0 Critical</td><td>Полный outage</td><td>1 час 24/7</td></tr>
-      <tr><td>P1 High</td><td>Значительная деградация</td><td>4 часа</td></tr>
-      <tr><td>P2 Medium</td><td>Минорная функциональность сломана</td><td>1 рабочий день</td></tr>
-      <tr><td>P3 Low</td><td>Question / feature request</td><td>3 рабочих дня</td></tr>
+      <tr><th>Severity</th><th>Description</th><th>Response time</th></tr>
+      <tr><td>P0 Critical</td><td>Full outage</td><td>1 hour 24/7</td></tr>
+      <tr><td>P1 High</td><td>Significant degradation</td><td>4 hours</td></tr>
+      <tr><td>P2 Medium</td><td>Minor functionality broken</td><td>1 business day</td></tr>
+      <tr><td>P3 Low</td><td>Question / feature request</td><td>3 business days</td></tr>
     </table>
 
-    <h2>7. Каналы коммуникации</h2>
+    <h2>7. Communication channels</h2>
     <ul>
       <li><strong>P0/P1:</strong> Direct Slack / Telegram + email</li>
       <li><strong>P2/P3:</strong> Email <a href="mailto:support@libermall.com">support@libermall.com</a></li>
       <li><strong>Status page:</strong> <a href="/status.html">id.libermall.com/status</a></li>
     </ul>
 
-    <p style="margin-top:48px;color:var(--muted);font-size:13px;">SLA включён в стандартный Enterprise-контракт. Контакт: <a href="mailto:legal@libermall.com">legal@libermall.com</a></p>
+    <p style="margin-top:48px;color:var(--muted);font-size:13px;">SLA is included in the standard Enterprise contract. Contact: <a href="mailto:legal@libermall.com">legal@libermall.com</a></p>
   </div>
 </article>
 
-<footer><div class="container"><div><img src="/assets/logo.svg" alt="Libermall ID" height="36"><p class="desc">Identity layer для экосистемы Libermall.</p></div><div><h4>Продукт</h4><ul><li><a href="/login.html">Войти</a></li><li><a href="/products.html">Экосистема</a></li><li><a href="/pricing.html">Pricing</a></li></ul></div><div><h4>Разработчикам</h4><ul><li><a href="/developers.html">Документация</a></li></ul></div><div><h4>Legal</h4><ul><li><a href="/privacy.html">Privacy</a></li><li><a href="/terms.html">Terms</a></li><li><a href="/legal-dpa.html">DPA</a></li><li><a href="/legal-sla.html">SLA</a></li></ul></div></div><div class="footer-bottom container"><div>© 2026 Libermall</div><div>Open source</div></div></footer>
+<footer><div class="container"><div><img src="/assets/logo.svg" alt="Libermall ID" height="36"><p class="desc">Identity layer for the Libermall ecosystem.</p></div><div><h4>Product</h4><ul><li><a href="/login.html">Sign in</a></li><li><a href="/products.html">Ecosystem</a></li><li><a href="/pricing.html">Pricing</a></li></ul></div><div><h4>Developers</h4><ul><li><a href="/developers.html">Documentation</a></li></ul></div><div><h4>Legal</h4><ul><li><a href="/privacy.html">Privacy</a></li><li><a href="/terms.html">Terms</a></li><li><a href="/legal-dpa.html">DPA</a></li><li><a href="/legal-sla.html">SLA</a></li></ul></div></div><div class="footer-bottom container"><div>© 2026 Libermall</div><div>Open source</div></div></footer>
 
 </body>
 </html>

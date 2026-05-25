@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Libermall ID — Один аккаунт для всей экосистемы</title>
-<meta name="description" content="Войдите через Telegram, TON Connect, Apple, Google или email — получите доступ ко всей экосистеме Libermall: Sites.Reviews, TonChat AI, TON.CEO, DEX, Card, Marketplace.">
+<title>Libermall ID — One account for the entire ecosystem</title>
+<meta name="description" content="Sign in via Telegram, TON Connect, Apple, Google or email — and unlock the whole Libermall ecosystem: Sites.Reviews, TonChat AI, TON.CEO, DEX (dex.libermall.com), Card, PayLibermall (pay.libermall.com), Marketplace.">
 <link rel="canonical" href="https://id.libermall.com/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#0A0A0C">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Libermall ID — единый аккаунт для всей экосистемы">
-<meta property="og:description" content="Войдите через Telegram или TON Connect. OpenID Connect, OAuth 2.0, open source.">
+<meta property="og:title" content="Libermall ID — one account for the entire ecosystem">
+<meta property="og:description" content="Sign in with Telegram or TON Connect. OpenID Connect, OAuth 2.0, open source.">
 <meta property="og:url" content="https://id.libermall.com/">
 <meta property="og:site_name" content="Libermall ID">
 <meta property="og:image" content="https://id.libermall.com/assets/og-cover.svg">
-<meta property="og:locale" content="ru_RU">
+<meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Libermall ID — единый аккаунт для всей экосистемы">
+<meta name="twitter:title" content="Libermall ID — one account for the entire ecosystem">
 <meta name="twitter:image" content="https://id.libermall.com/assets/og-cover.svg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,17 +30,17 @@
   "@context": "https://schema.org",
   "@graph": [
     { "@type": "Organization", "@id": "https://id.libermall.com/#org", "name": "Libermall ID", "url": "https://id.libermall.com/", "logo": "https://id.libermall.com/assets/logo.svg", "sameAs": ["https://libermall.com","https://sites.reviews","https://dex.libermall.com","https://card.libermall.com"] },
-    { "@type": "WebSite", "@id": "https://id.libermall.com/#website", "url": "https://id.libermall.com/", "name": "Libermall ID", "publisher": { "@id": "https://id.libermall.com/#org" }, "inLanguage": "ru-RU" },
-    { "@type": "SoftwareApplication", "name": "Libermall ID", "operatingSystem": "Web", "applicationCategory": "AuthenticationApplication", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "RUB" } },
+    { "@type": "WebSite", "@id": "https://id.libermall.com/#website", "url": "https://id.libermall.com/", "name": "Libermall ID", "publisher": { "@id": "https://id.libermall.com/#org" }, "inLanguage": "en-US" },
+    { "@type": "SoftwareApplication", "name": "Libermall ID", "operatingSystem": "Web", "applicationCategory": "AuthenticationApplication", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } },
     { "@type": "FAQPage", "mainEntity": [
-      { "@type": "Question", "name": "Сколько стоит Libermall ID?", "acceptedAnswer": { "@type": "Answer", "text": "Бесплатно навсегда для пользователей. Для разработчиков — бесплатный tier OIDC до 10K MAU, дальше — по согласованию." } },
-      { "@type": "Question", "name": "Где хранятся мои данные?", "acceptedAnswer": { "@type": "Answer", "text": "На изолированном VPS в Frankfurt. Профиль и сессии — PostgreSQL, кэш — Redis. Резервные копии шифруются." } },
-      { "@type": "Question", "name": "Что если я потеряю доступ к Telegram?", "acceptedAnswer": { "@type": "Answer", "text": "Привяжите второй способ входа (TON Connect или email) — это резерв. Также можно настроить 2FA recovery codes." } }
+      { "@type": "Question", "name": "How much does Libermall ID cost?", "acceptedAnswer": { "@type": "Answer", "text": "Free forever for end users. For developers — a free OIDC tier up to 10K MAU, beyond that on request." } },
+      { "@type": "Question", "name": "Where is my data stored?", "acceptedAnswer": { "@type": "Answer", "text": "On an isolated VPS in Frankfurt. Profile and sessions in PostgreSQL, cache in Redis. Backups are encrypted." } },
+      { "@type": "Question", "name": "What if I lose access to Telegram?", "acceptedAnswer": { "@type": "Answer", "text": "Link a second sign-in method (TON Connect or email) as a backup. You can also set up 2FA recovery codes." } }
     ]}
   ]
 }
 </script>
-<meta name="twitter:description" content="Войдите через Telegram, TON Connect, Apple, Google или email — получите доступ ко всей экосистеме Libermall: Sites.Reviews, TonChat AI, TON.CEO, DEX, Card, Marketplace.">
+<meta name="twitter:description" content="Sign in via Telegram, TON Connect, Apple, Google or email — and unlock the whole Libermall ecosystem: Sites.Reviews, TonChat AI, TON.CEO, DEX (dex.libermall.com), Card, PayLibermall (pay.libermall.com), Marketplace.">
 </head>
 <body>
 
@@ -50,16 +50,16 @@
       <img src="/assets/logo.svg" alt="Libermall ID" height="36">
     </a>
     <div class="nav-links">
-      <a href="/products.html">Продукты</a>
-      <a href="/developers.html">Разработчикам</a>
-      <a href="/about.html">О проекте</a>
+      <a href="/products.html">Products</a>
+      <a href="/developers.html">Developers</a>
+      <a href="/about.html">About</a>
       <a href="/developers.html#docs">Docs</a>
     </div>
     <div class="nav-actions">
-      <a href="/login" class="btn btn-ghost">Войти</a>
-      <a href="/signup" class="btn btn-primary">Создать аккаунт</a>
+      <a href="/login" class="btn btn-ghost">Sign in</a>
+      <a href="/signup" class="btn btn-primary">Create account</a>
     </div>
-    <button class="nav-toggle" aria-label="Меню" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+    <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg>
     </button>
   </div>
@@ -70,14 +70,14 @@
   <div class="container">
     <div class="hero-grid">
       <div>
-        <span class="eyebrow"><span class="dot"></span>Identity layer для экосистемы Libermall</span>
-        <h1>Один аккаунт<br>для всей <span class="accent">экосистемы</span></h1>
-        <p class="lead">Libermall ID — единый Single Sign-On для Sites.Reviews, TonChat AI, TON.CEO, DEX, Card и Marketplace. Войдите один раз — пользуйтесь везде.</p>
+        <span class="eyebrow"><span class="dot"></span>Identity layer for the Libermall ecosystem</span>
+        <h1>One account<br>for the entire <span class="accent">ecosystem</span></h1>
+        <p class="lead">Libermall ID is the single sign-on layer for Sites.Reviews, TonChat AI, TON.CEO, DEX, PayLibermall, Card and Marketplace. Sign in once, use everywhere.</p>
         <div class="hero-actions">
-          <a href="/signup" class="btn btn-primary btn-lg">Создать аккаунт →</a>
-          <a href="/login" class="btn btn-secondary btn-lg">У меня уже есть</a>
+          <a href="/signup" class="btn btn-primary btn-lg">Create account →</a>
+          <a href="/login" class="btn btn-secondary btn-lg">I already have one</a>
         </div>
-        <p class="hero-fineprint"><b>Бесплатно навсегда</b> · <b>Open source</b> · <b>OpenID Connect</b></p>
+        <p class="hero-fineprint"><b>Free forever</b> · <b>Open source</b> · <b>OpenID Connect</b></p>
       </div>
 
       <!-- ── radial ecosystem diagram ── -->
@@ -152,28 +152,28 @@
         <div class="feat-bar-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
         <div>
           <h4 class="feat-bar-title">Single Sign-On</h4>
-          <p class="feat-bar-desc">Один логин для всех продуктов Libermall</p>
+          <p class="feat-bar-desc">One login for every Libermall product</p>
         </div>
       </div>
       <div class="feat-bar-item">
         <div class="feat-bar-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 3 5v6c0 5.5 3.84 10.74 9 12 5.16-1.26 9-6.5 9-12V5l-9-3z" stroke-linecap="round"/></svg></div>
         <div>
           <h4 class="feat-bar-title">Secure by Design</h4>
-          <p class="feat-bar-desc">Industry-standard auth и защита данных</p>
+          <p class="feat-bar-desc">Industry-standard auth and data protection</p>
         </div>
       </div>
       <div class="feat-bar-item">
         <div class="feat-bar-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
         <div>
           <h4 class="feat-bar-title">Cross-Product Profile</h4>
-          <p class="feat-bar-desc">Активность, репутация и настройки в одном месте</p>
+          <p class="feat-bar-desc">Activity, reputation and settings in one place</p>
         </div>
       </div>
       <div class="feat-bar-item">
         <div class="feat-bar-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <div>
           <h4 class="feat-bar-title">Instant Access</h4>
-          <p class="feat-bar-desc">Без паролей, без подтверждения email</p>
+          <p class="feat-bar-desc">No passwords, no email confirmations</p>
         </div>
       </div>
     </div>
@@ -183,7 +183,7 @@
 <!-- ─── trusted strip ─── -->
 <section class="trusted">
   <div class="container">
-    <div class="trusted-label">Принимается во всей экосистеме Libermall</div>
+    <div class="trusted-label">Accepted across the entire Libermall ecosystem</div>
     <div class="trusted-logos">
       <a href="https://sites.reviews" class="trusted-logo"><span class="lico" style="background:#2A7BFF;">SR</span>Sites.Reviews</a>
       <a href="https://tonchat.ai" class="trusted-logo"><span class="lico" style="background:#22C55E;">TC</span>TonChat AI</a>
@@ -199,25 +199,25 @@
 <section class="section">
   <div class="container">
     <span class="section-eyebrow">Why Libermall ID?</span>
-    <h2 class="section-title">Спроектирован для удобства и безопасности</h2>
-    <p class="section-lead">Каждая деталь — оптимизирована под seamless experience во всех продуктах экосистемы Libermall.</p>
+    <h2 class="section-title">Designed for convenience and security</h2>
+    <p class="section-lead">Every detail is engineered for a seamless experience across every Libermall product.</p>
 
     <div class="why-grid">
       <div class="why-text"></div>
       <div class="why-card">
         <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <h3>Instant Login</h3>
-        <p>Telegram, TON Connect, email или social. Без паролей и confirmation-писем.</p>
+        <p>Telegram, TON Connect, email or social. No passwords, no confirmation emails.</p>
       </div>
       <div class="why-card">
         <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 3 5v6c0 5.5 3.84 10.74 9 12 5.16-1.26 9-6.5 9-12V5l-9-3z" stroke-linecap="round"/></svg></div>
         <h3>Top Security</h3>
-        <p>OpenID Connect, OAuth 2.0, SAML, 2FA, шифрование и audit log из коробки.</p>
+        <p>OpenID Connect, OAuth 2.0, SAML, 2FA, encryption and audit log out of the box.</p>
       </div>
       <div class="why-card">
         <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="7" r="4"/><path d="M3 21v-2a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v2"/></svg></div>
         <h3>Unified Profile</h3>
-        <p>Кошельки, отзывы, рейтинг трейдера, накопления на Card — единая история.</p>
+        <p>Wallets, reviews, trader rating, Card balance — a single user history.</p>
       </div>
     </div>
   </div>
@@ -227,43 +227,43 @@
 <section class="section" style="padding-top:0;">
   <div class="container">
     <span class="section-eyebrow">Ecosystem Products</span>
-    <h2 class="section-title">Все связано. Все под одним аккаунтом.</h2>
+    <h2 class="section-title">Everything connected. All under one account.</h2>
 
     <div class="products-section">
       <div class="products-grid">
         <a href="https://sites.reviews" class="product">
           <div class="ico" style="background:#2A7BFF;"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-6 4 2 7-6-4-6 4 2-7-6-4h7z"/></svg></div>
           <div class="name">Sites.Reviews</div>
-          <div class="desc">Каталог отзывов</div>
+          <div class="desc">Reviews & ratings</div>
         </a>
         <a href="https://tonchat.ai" class="product">
           <div class="ico" style="background:#22C55E;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8v.5z" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <div class="name">TonChat AI</div>
-          <div class="desc">AI-помощник</div>
+          <div class="desc">AI assistant</div>
         </a>
         <a href="https://ton.ceo" class="product">
           <div class="ico" style="background:#0098EA;"><svg width="22" height="22" viewBox="0 0 56 56" fill="currentColor"><path d="M38.45 14H17.55a5.1 5.1 0 00-4.42 7.64L26.57 43a1.65 1.65 0 002.86 0l13.44-21.36A5.1 5.1 0 0038.45 14z"/></svg></div>
           <div class="name">TON.CEO</div>
-          <div class="desc">Mastodon-сеть</div>
+          <div class="desc">Mastodon network</div>
         </a>
         <a href="https://dex.libermall.com" class="product">
           <div class="ico" style="background:#FFD60A;color:#0A0A0C;"><svg width="22" height="22" viewBox="0 0 56 56" fill="currentColor"><path d="M28 8L48 28L28 48L8 28Z"/></svg></div>
           <div class="name">Libermall DEX</div>
-          <div class="desc">Биржа на TON</div>
+          <div class="desc">TON DEX</div>
         </a>
         <a href="https://card.libermall.com" class="product">
           <div class="ico" style="background:#3B82F6;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg></div>
           <div class="name">Libermall Card</div>
-          <div class="desc">Виртуальные карты</div>
+          <div class="desc">Virtual cards</div>
         </a>
         <a href="https://libermall.com" class="product">
           <div class="ico" style="background:#A855F7;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z M3 6h18 M16 10a4 4 0 1 1-8 0" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <div class="name">Marketplace</div>
-          <div class="desc">Маркетплейс</div>
+          <div class="desc">Marketplace</div>
         </a>
       </div>
       <div style="text-align:center;">
-        <a href="/products.html" class="explore-btn">Все продукты экосистемы →</a>
+        <a href="/products.html" class="explore-btn">All ecosystem products →</a>
       </div>
     </div>
   </div>
@@ -273,15 +273,15 @@
 <section class="section" style="padding-top:0;">
   <div class="container">
     <span class="section-eyebrow">Sign-in methods</span>
-    <h2 class="section-title">5 способов войти. Один аккаунт.</h2>
-    <p class="section-lead">Любой способ ведёт к одному и тому же профилю. Привяжите несколько — каждый станет резервным.</p>
+    <h2 class="section-title">5 ways to sign in. One account.</h2>
+    <p class="section-lead">Every method leads to the same profile. Link multiple — each becomes a backup.</p>
 
     <div class="auth-methods-grid">
       <div class="auth-method tg">
         <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M21.95 4.18L18.23 19.95c-.28 1.24-1.02 1.55-2.06.96l-5.69-4.19-2.75 2.64c-.3.3-.56.56-1.15.56l.41-5.79 10.55-9.53c.46-.41-.1-.64-.71-.23L4.78 12.41-.83 10.66c-1.22-.38-1.24-1.22.25-1.81L20.4 1.04c1.01-.38 1.9.24 1.55 1.55z" transform="translate(2, 0) scale(0.9)"/></svg></div>
         <h3>Telegram</h3>
-        <p>Один тап в @LibermallIDbot. HMAC-подпись от Telegram.</p>
-        <div class="meta"><b>~3 сек</b> · <b>0 полей</b></div>
+        <p>One tap in @LibermallIDbot. Signed with HMAC by Telegram.</p>
+        <div class="meta"><b>~3 sec</b> · <b>0 fields</b></div>
       </div>
       <div class="auth-method ton">
         <div class="ico"><svg width="22" height="22" viewBox="0 0 56 56" fill="currentColor"><path d="M38.45 14H17.55a5.1 5.1 0 00-4.42 7.64L26.57 43a1.65 1.65 0 002.86 0l13.44-21.36A5.1 5.1 0 0038.45 14z"/></svg></div>
@@ -292,8 +292,8 @@
       <div class="auth-method email">
         <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m2 7 10 6 10-6"/></svg></div>
         <h3>Magic Link</h3>
-        <p>Введите email, получите ссылку, кликните.</p>
-        <div class="meta"><b>15 мин</b> · <b>1-click</b></div>
+        <p>Enter your email, get a link, click it.</p>
+        <div class="meta"><b>15 min</b> · <b>1-click</b></div>
       </div>
       <div class="auth-method apple">
         <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg></div>
@@ -315,25 +315,25 @@
 <section class="section" style="padding-top:0;">
   <div class="container">
     <span class="section-eyebrow">Create your account</span>
-    <h2 class="section-title">Регистрация — меньше минуты</h2>
+    <h2 class="section-title">Sign-up in under a minute</h2>
 
     <div class="steps-card">
       <div class="steps-grid">
         <div class="steps-list">
           <div class="step">
             <div class="step-num">1</div>
-            <div><h4>Выберите способ</h4><p>Telegram, TON Connect, email или social</p></div>
+            <div><h4>Choose a method</h4><p>Telegram, TON Connect, email or social</p></div>
           </div>
           <div class="step">
             <div class="step-num">2</div>
-            <div><h4>Подтвердите в провайдере</h4><p>Один тап в Telegram или подпись в TON-кошельке</p></div>
+            <div><h4>Confirm with your provider</h4><p>One tap in Telegram or sign with your TON wallet</p></div>
           </div>
           <div class="step">
             <div class="step-num">3</div>
-            <div><h4>Готово</h4><p>Аккаунт активен во всей экосистеме Libermall</p></div>
+            <div><h4>Done</h4><p>Your account is active across the entire Libermall ecosystem</p></div>
           </div>
           <div style="margin-top:16px;">
-            <a href="/signup" class="btn btn-primary">Создать аккаунт →</a>
+            <a href="/signup" class="btn btn-primary">Create account →</a>
           </div>
         </div>
 
@@ -369,25 +369,25 @@
 <section class="section">
   <div class="container">
     <span class="section-eyebrow">Mobile-first</span>
-    <h2 class="section-title">Удобно с любого устройства</h2>
-    <p class="section-lead">Адаптивный веб + Telegram Mini App. Один профиль — везде.</p>
+    <h2 class="section-title">Comfortable on any device</h2>
+    <p class="section-lead">Responsive web + Telegram Mini App. One profile — everywhere.</p>
 
     <div class="mobile-section">
       <div>
         <h3 style="margin:0 0 12px;font-size:1.25rem;">Smooth, fast and built for on-the-go access</h3>
-        <p style="color:var(--text-soft);font-size:14px;line-height:1.6;margin:0 0 16px;">Откройте Mini App прямо в Telegram — не нужно скачивать приложение. Привязка кошельков, управление сессиями, переход в любой продукт экосистемы — без выхода из мессенджера.</p>
+        <p style="color:var(--text-soft);font-size:14px;line-height:1.6;margin:0 0 16px;">Open the Mini App right inside Telegram — no install needed. Link wallets, manage sessions, jump into any ecosystem product without leaving the messenger.</p>
         <a href="https://t.me/LibermallIDbot" class="btn btn-secondary">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.95 4.18L18.23 19.95c-.28 1.24-1.02 1.55-2.06.96l-5.69-4.19-2.75 2.64c-.3.3-.56.56-1.15.56l.41-5.79 10.55-9.53c.46-.41-.1-.64-.71-.23L4.78 12.41-.83 10.66c-1.22-.38-1.24-1.22.25-1.81L20.4 1.04c1.01-.38 1.9.24 1.55 1.55z" transform="translate(2, 0) scale(0.9)"/></svg>
-          Открыть @LibermallIDbot
+          Open @LibermallIDbot
         </a>
       </div>
       <div class="phones">
         <div class="phone">
           <div class="phead"><div class="phead-av"><svg width="14" height="14" viewBox="0 0 48 48"><path d="M24 0 L48 24 L24 48 L0 24 Z" fill="#0A0A0C"/><path d="M18 16 L12 24 L18 32" stroke="#FFD60A" stroke-width="3" fill="none"/><path d="M30 16 L36 24 L30 32" stroke="#FFD60A" stroke-width="3" fill="none"/></svg></div><div class="phead-name">Libermall ID</div></div>
-          <h5>Один аккаунт для всей экосистемы</h5>
-          <p>Войдите в любой сервис Libermall</p>
-          <div class="pbtn">Создать аккаунт</div>
-          <div class="pbtn outline">Войти</div>
+          <h5>One account for the entire ecosystem</h5>
+          <p>Sign in to any Libermall service</p>
+          <div class="pbtn">Create account</div>
+          <div class="pbtn outline">Sign in</div>
         </div>
         <div class="phone">
           <div class="phead"><div class="phead-av"><svg width="14" height="14" viewBox="0 0 48 48"><path d="M24 0 L48 24 L24 48 L0 24 Z" fill="#0A0A0C"/><path d="M18 16 L12 24 L18 32" stroke="#FFD60A" stroke-width="3" fill="none"/><path d="M30 16 L36 24 L30 32" stroke="#FFD60A" stroke-width="3" fill="none"/></svg></div><div class="phead-name">Welcome back</div></div>
@@ -407,7 +407,7 @@
         <div class="phone">
           <div class="phead"><div class="phead-name" style="text-align:center;width:100%;">Account created</div></div>
           <div class="check-circle"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0A0A0C" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <p style="text-align:center;font-size:11px;">Вы можете использовать Libermall ID во всех продуктах.</p>
+          <p style="text-align:center;font-size:11px;">You can use Libermall ID across every product.</p>
         </div>
       </div>
     </div>
@@ -420,8 +420,8 @@
     <span class="section-eyebrow">Standards</span>
     <div class="standards-section">
       <div>
-        <h2 class="section-title">Построено на доверенных стандартах</h2>
-        <p style="color:var(--text-soft);font-size:1.02rem;margin:0 0 8px;">Modern authentication протоколы для secure и interoperable будущего. Никакого vendor lock-in — стандартный OpenID Connect работает с любым языком и фреймворком.</p>
+        <h2 class="section-title">Built on trusted standards</h2>
+        <p style="color:var(--text-soft);font-size:1.02rem;margin:0 0 8px;">Modern authentication protocols for a secure, interoperable future. Zero vendor lock-in — standard OpenID Connect works with any language or framework.</p>
         <div class="standards-list">
           <div class="std-pill">
             <div class="ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg></div>
@@ -456,18 +456,18 @@
     <div class="devs">
       <div>
         <span class="section-eyebrow">For developers</span>
-        <h2 class="section-title">Подключите свой сервис<br>за 5 минут</h2>
-        <p style="color:var(--text-soft);margin:0;">Стандартный OpenID Connect + готовые SDK. Нулевой vendor lock-in.</p>
+        <h2 class="section-title">Connect your service<br>in 5 minutes</h2>
+        <p style="color:var(--text-soft);margin:0;">Standard OpenID Connect + ready-made SDKs. Zero vendor lock-in.</p>
         <ul>
           <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>OpenID Connect 1.0 — discovery, JWKS, userinfo</li>
           <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>OAuth 2.0 Authorization Code + PKCE</li>
-          <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>SAML 2.0 для enterprise</li>
-          <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>JWT RS256, 4096-bit ключ</li>
-          <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>SDK: Laravel, Next.js, Node, Python</li>
+          <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>SAML 2.0 for enterprise</li>
+          <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>JWT RS256, 4096-bit key</li>
+          <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>SDKs: Laravel, Next.js, Node, Python</li>
         </ul>
         <div style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap;">
-          <a href="/developers.html" class="btn btn-primary">Документация</a>
-          <a href="https://github.com/DeFiTON/libermall-id-landing" class="btn btn-secondary">
+          <a href="/developers.html" class="btn btn-primary">Documentation</a>
+          <a href="https://github.com/LiberMall/libermall-id-landing" class="btn btn-secondary">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
             GitHub
           </a>
@@ -480,7 +480,7 @@
           <span class="code-tab">Python</span>
           <span class="code-tab">curl</span>
         </div>
-<pre class="code-block"><span class="c-com">// Авторизуйте пользователя за 5 строк</span>
+<pre class="code-block"><span class="c-com">// Authenticate a user in 5 lines</span>
 <span class="c-key">import</span> { Issuer } <span class="c-key">from</span> <span class="c-str">'openid-client'</span>;
 
 <span class="c-key">const</span> issuer = <span class="c-key">await</span> Issuer.<span class="c-fn">discover</span>(
@@ -503,8 +503,8 @@
 <section class="section">
   <div class="container">
     <span class="section-eyebrow">Security</span>
-    <h2 class="section-title">Безопасность на уровне инфраструктуры</h2>
-    <p class="section-lead">Industry-standard стек защиты. Без компромиссов на скорости разработки.</p>
+    <h2 class="section-title">Infrastructure-grade security</h2>
+    <p class="section-lead">Industry-standard defence stack. No compromise on development speed.</p>
     <div class="security-grid">
       <div class="sec-card">
         <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 3 5v6c0 5.5 3.84 10.74 9 12 5.16-1.26 9-6.5 9-12V5l-9-3z" stroke-linecap="round"/></svg>
@@ -514,7 +514,7 @@
       <div class="sec-card">
         <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
         <div class="title">JWT RS256</div>
-        <div class="desc">4096-bit подпись, JWKS rotation</div>
+        <div class="desc">4096-bit signing, JWKS rotation</div>
       </div>
       <div class="sec-card">
         <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 4 12 14.01 9 11.01" stroke-linejoin="round"/><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/></svg>
@@ -534,17 +534,17 @@
       <div class="sec-card">
         <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
         <div class="title">Session management</div>
-        <div class="desc">Revoke devices, активные сессии</div>
+        <div class="desc">Revoke devices, active sessions</div>
       </div>
       <div class="sec-card">
         <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6 M8 6L2 12l6 6"/></svg>
         <div class="title">Open source</div>
-        <div class="desc">Casdoor core + наш UI на GitHub</div>
+        <div class="desc">Casdoor core + our UI on GitHub</div>
       </div>
       <div class="sec-card">
         <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z M9 22V12h6v10" stroke-linejoin="round"/></svg>
         <div class="title">Self-hosted</div>
-        <div class="desc">Изолированный VPS, ваш контроль</div>
+        <div class="desc">Isolated VPS, your control</div>
       </div>
     </div>
   </div>
@@ -555,46 +555,46 @@
   <div class="container">
     <div class="section-head-center">
       <span class="section-eyebrow">Pricing</span>
-      <h2 class="section-title">Бесплатно для пользователей. Понятно для разработчиков.</h2>
-      <p class="section-lead">Никаких скрытых платежей. Зарегистрируйтесь и используйте — мы зарабатываем на enterprise-интеграциях.</p>
+      <h2 class="section-title">Free for users. Transparent for developers.</h2>
+      <p class="section-lead">No hidden fees. Sign up and use it — we make money on enterprise integrations.</p>
     </div>
     <div class="compare-grid">
       <div class="compare-card">
-        <h3>Личный аккаунт</h3>
-        <div class="price">Бесплатно <small>навсегда</small></div>
-        <p style="color:var(--muted);font-size:13px;margin:0;">Для пользователей всех продуктов Libermall.</p>
+        <h3>Personal account</h3>
+        <div class="price">Free <small>forever</small></div>
+        <p style="color:var(--muted);font-size:13px;margin:0;">For users of every Libermall product.</p>
         <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Все способы входа</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Привязка кошельков, email</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>All sign-in methods</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Link wallets and email</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>2FA, audit log, sessions</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Mini App + бот</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Mini App + bot</li>
         </ul>
-        <a href="/signup" class="btn btn-secondary" style="width:100%;">Создать аккаунт</a>
+        <a href="/signup" class="btn btn-secondary" style="width:100%;">Create account</a>
       </div>
       <div class="compare-card featured">
         <div class="ribbon">Recommended</div>
         <h3>Developer</h3>
-        <div class="price">Free <small>до 10K MAU</small></div>
-        <p style="color:var(--muted);font-size:13px;margin:0;">Подключите свой сервис как OAuth-клиент.</p>
+        <div class="price">Free <small>up to 10K MAU</small></div>
+        <p style="color:var(--muted);font-size:13px;margin:0;">Connect your service as an OAuth client.</p>
         <ul>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>OpenID Connect + OAuth 2.0</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>До 10 redirect URIs</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>10K MAU бесплатно</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Up to 10 redirect URIs</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>10K MAU free</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Email support</li>
         </ul>
-        <a href="mailto:hello@libermall.com?subject=Libermall%20ID%20client%20request" class="btn btn-primary" style="width:100%;">Запросить ключ</a>
+        <a href="mailto:hello@libermall.com?subject=Libermall%20ID%20client%20request" class="btn btn-primary" style="width:100%;">Request a key</a>
       </div>
       <div class="compare-card">
         <h3>Enterprise</h3>
         <div class="price">Custom</div>
         <p style="color:var(--muted);font-size:13px;margin:0;">Whitelabel, SAML, SLA, dedicated support.</p>
         <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Безлимитный MAU</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Unlimited MAU</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>SAML 2.0 + SCIM</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>99.9% SLA</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Dedicated CSM</li>
         </ul>
-        <a href="mailto:hello@libermall.com?subject=Enterprise%20Libermall%20ID" class="btn btn-secondary" style="width:100%;">Связаться</a>
+        <a href="mailto:hello@libermall.com?subject=Enterprise%20Libermall%20ID" class="btn btn-secondary" style="width:100%;">Contact us</a>
       </div>
     </div>
   </div>
@@ -605,32 +605,32 @@
   <div class="container">
     <div class="section-head-center">
       <span class="section-eyebrow">FAQ</span>
-      <h2 class="section-title">Частые вопросы</h2>
+      <h2 class="section-title">Frequently asked questions</h2>
     </div>
     <div class="faq">
       <details>
-        <summary>Сколько стоит Libermall ID?</summary>
-        <p>Бесплатно навсегда для пользователей. Для разработчиков — бесплатный tier OIDC до 10K MAU, дальше — по согласованию. Enterprise (SAML, SCIM, SLA) — custom pricing.</p>
+        <summary>How much does Libermall ID cost?</summary>
+        <p>Free forever for users. For developers — a free OIDC tier up to 10K MAU; beyond that — by arrangement. Enterprise (SAML, SCIM, SLA) — custom pricing.</p>
       </details>
       <details>
-        <summary>Где хранятся мои данные?</summary>
-        <p>На изолированном VPS в Frankfurt. Профиль и сессии — PostgreSQL, кэш — Redis. Резервные копии шифруются. Ваш TG-id, email и привязанные кошельки видим только мы — третьим сторонам не передаём (кроме как через ваш явный OAuth consent).</p>
+        <summary>Where is my data stored?</summary>
+        <p>On an isolated VPS in Frankfurt. Profiles and sessions in PostgreSQL, cache in Redis. Backups are encrypted. Your Telegram id, email and linked wallets are visible only to us — never shared with third parties without your explicit OAuth consent.</p>
       </details>
       <details>
-        <summary>Что если я потеряю доступ к Telegram?</summary>
-        <p>Привяжите второй способ входа (TON Connect или email) — это резерв. Также можно настроить 2FA recovery codes. Восстановление через support — только если есть подтверждение владения аккаунтом.</p>
+        <summary>What if I lose access to Telegram?</summary>
+        <p>Link a second sign-in method (TON Connect or email) as a backup. You can also set up 2FA recovery codes. Support-based recovery is available only with verified proof of ownership.</p>
       </details>
       <details>
-        <summary>Можно ли использовать без Telegram?</summary>
-        <p>Да. Доступны TON Connect (Tonkeeper/MyTonWallet), email magic-link, Apple ID и Google. Telegram — самый быстрый способ, но не единственный.</p>
+        <summary>Can I use it without Telegram?</summary>
+        <p>Yes. TON Connect (Tonkeeper / MyTonWallet), email magic link, Apple ID and Google are available. Telegram is the fastest, but not the only option.</p>
       </details>
       <details>
-        <summary>Что такое cross-product profile?</summary>
-        <p>Ваш профиль (имя, аватар, привязанные кошельки) виден во всех продуктах экосистемы. Накопления на Card, рейтинг трейдера на DEX, отзывы на Sites.Reviews — всё под одним аккаунтом.</p>
+        <summary>What is a cross-product profile?</summary>
+        <p>Your profile (name, avatar, linked wallets) is visible across the whole ecosystem. Card balance, DEX trader rating, Sites.Reviews reviewer rep — all under one account.</p>
       </details>
       <details>
-        <summary>Это open source?</summary>
-        <p>Auth core — Casdoor (BSD 3-Clause). Наш UI и бот — MIT на github.com/DeFiTON. Кастомные адаптеры для TG и TON — тоже public.</p>
+        <summary>Is it open source?</summary>
+        <p>Auth core — Casdoor (BSD 3-Clause). Our UI and bot — MIT on github.com/LiberMall. The custom TG and TON adapters are public too.</p>
       </details>
     </div>
   </div>
@@ -640,11 +640,11 @@
 <section class="section" style="padding-bottom:0;">
   <div class="container">
     <div class="cta-final">
-      <h2>Готовы войти в экосистему?</h2>
-      <p>Один аккаунт открывает доступ ко всему. Без паролей, без подписок, без скрытых платежей.</p>
+      <h2>Ready to enter the ecosystem?</h2>
+      <p>One account unlocks everything. No passwords, no subscriptions, no hidden fees.</p>
       <div class="actions">
-        <a href="/signup" class="btn btn-primary btn-lg">Создать аккаунт →</a>
-        <a href="/developers.html" class="btn btn-secondary btn-lg">Документация для разработчиков</a>
+        <a href="/signup" class="btn btn-primary btn-lg">Create account →</a>
+        <a href="/developers.html" class="btn btn-secondary btn-lg">Developer documentation</a>
       </div>
     </div>
   </div>
@@ -654,7 +654,7 @@
   <div class="container">
     <div>
       <img src="/assets/logo.svg" alt="Libermall ID" height="36">
-      <p class="desc">Identity layer для экосистемы Libermall.</p>
+      <p class="desc">Identity layer for the Libermall ecosystem.</p>
       <div class="footer-socials">
         <a href="https://github.com/LiberMall" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
@@ -674,36 +674,36 @@
       </div>
     </div>
     <div>
-      <h4>Продукт</h4>
+      <h4>Product</h4>
       <ul>
-        <li><a href="/login">Войти</a></li>
-        <li><a href="/signup">Создать аккаунт</a></li>
-        <li><a href="/products.html">Экосистема</a></li>
-        <li><a href="/about.html">О проекте</a></li>
+        <li><a href="/login">Sign in</a></li>
+        <li><a href="/signup">Create account</a></li>
+        <li><a href="/products.html">Ecosystem</a></li>
+        <li><a href="/about.html">About</a></li>
       </ul>
     </div>
     <div>
-      <h4>Разработчикам</h4>
+      <h4>Developers</h4>
       <ul>
-        <li><a href="/developers.html">Документация</a></li>
-        <li><a href="/integrate.html">Интегрировать</a></li>
-        <li><a href="https://github.com/DeFiTON/libermall-id-landing">GitHub</a></li>
+        <li><a href="/developers.html">Documentation</a></li>
+        <li><a href="/integrate.html">Integrate</a></li>
+        <li><a href="https://github.com/LiberMall/libermall-id-landing">GitHub</a></li>
         <li><a href="/.well-known/openid-configuration">OIDC discovery</a></li>
       </ul>
     </div>
     <div>
-      <h4>Юридическое</h4>
+      <h4>Legal</h4>
       <ul>
-        <li><a href="/privacy.html">Приватность</a></li>
-        <li><a href="/terms.html">Условия</a></li>
+        <li><a href="/privacy.html">Privacy</a></li>
+        <li><a href="/terms.html">Terms</a></li>
         <li><a href="mailto:privacy@libermall.com">privacy@libermall.com</a></li>
-        <li><a href="mailto:hello@libermall.com">Контакт</a></li>
+        <li><a href="mailto:hello@libermall.com">Contact</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom container">
-    <div>© 2026 Libermall. Все права защищены.</div>
-    <div>Open source · <a href="https://github.com/DeFiTON/libermall-id-landing">DeFiTON/libermall-id-landing</a></div>
+    <div>© 2026 Libermall. All rights reserved.</div>
+    <div>Open source · <a href="https://github.com/LiberMall/libermall-id-landing">LiberMall/libermall-id-landing</a></div>
   </div>
 </footer>
 

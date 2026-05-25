@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Quickstart — Libermall ID</title>
-<meta name="description" content="5-минутный quickstart для интеграции Libermall ID. Готовые snippet'ы.">
+<meta name="description" content="5-minute quickstart for integrating Libermall ID. Copy-paste snippets.">
 <link rel="canonical" href="https://id.libermall.com/docs-quickstart.html">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"><meta name="theme-color" content="#0A0A0C">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/style.css">
 <meta property="og:title" content="Quickstart — Libermall ID">
-<meta property="og:description" content="5-минутный quickstart для интеграции Libermall ID. Готовые snippet'ы.">
+<meta property="og:description" content="5-minute quickstart for integrating Libermall ID. Copy-paste snippets.">
 <meta property="og:url" content="https://id.libermall.com/docs-quickstart.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Libermall ID">
 <meta property="og:image" content="https://id.libermall.com/assets/og-cover.svg">
-<meta property="og:locale" content="ru_RU">
+<meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Quickstart — Libermall ID">
-<meta name="twitter:description" content="5-минутный quickstart для интеграции Libermall ID. Готовые snippet'ы.">
+<meta name="twitter:description" content="5-minute quickstart for integrating Libermall ID. Copy-paste snippets.">
 <meta name="twitter:image" content="https://id.libermall.com/assets/og-cover.svg">
 <script type="application/ld+json">
 {
@@ -30,7 +30,7 @@
       "url": "https://id.libermall.com/docs-quickstart.html",
       "name": "Quickstart",
       "isPartOf": {"@id": "https://id.libermall.com/#website"},
-      "inLanguage": "ru-RU"
+      "inLanguage": "en-US"
     },
     {
       "@type": "BreadcrumbList",
@@ -45,53 +45,53 @@
 </head>
 <body>
 
-<nav class="nav"><div class="container nav-inner"><a href="/" class="nav-logo"><img src="/assets/logo.svg" alt="Libermall ID" height="36"></a><div class="nav-links"><a href="/products.html">Продукты</a><a href="/developers.html">Разработчикам</a><a href="/about.html">О проекте</a></div><div class="nav-actions"><a href="/login.html" class="btn btn-ghost">Войти</a><a href="/signup.html" class="btn btn-primary">Создать</a></div></div></nav>
+<nav class="nav"><div class="container nav-inner"><a href="/" class="nav-logo"><img src="/assets/logo.svg" alt="Libermall ID" height="36"></a><div class="nav-links"><a href="/products.html">Products</a><a href="/developers.html">Developers</a><a href="/about.html">About</a></div><div class="nav-actions"><a href="/login.html" class="btn btn-ghost">Sign in</a><a href="/signup.html" class="btn btn-primary">Create</a></div></div></nav>
 
 <article class="long">
   <div class="container-narrow">
-    <span class="eyebrow"><span class="dot"></span>Quickstart · 5 минут</span>
-    <h1>Интеграция Libermall ID за 5 минут</h1>
-    <p class="article-lead">От нуля до работающего «Войти через Libermall ID» на вашем сайте.</p>
+    <span class="eyebrow"><span class="dot"></span>Quickstart · 5 minutes</span>
+    <h1>Integrate Libermall ID in 5 minutes</h1>
+    <p class="article-lead">From zero to a working "Sign in with Libermall ID" button on your site.</p>
 
     <div class="toc">
-      <h4>Шаги</h4>
-      <a href="#step-1">1. Получите client_id</a>
-      <a href="#step-2">2. Установите SDK</a>
-      <a href="#step-3">3. Настройте redirect</a>
-      <a href="#step-4">4. Добавьте кнопку</a>
-      <a href="#step-5">5. Обработайте callback</a>
+      <h4>Steps</h4>
+      <a href="#step-1">1. Get a client_id</a>
+      <a href="#step-2">2. Install the SDK</a>
+      <a href="#step-3">3. Configure the redirect</a>
+      <a href="#step-4">4. Add the button</a>
+      <a href="#step-5">5. Handle the callback</a>
     </div>
 
-    <h2 id="step-1">1. Получите client_id</h2>
-    <p>Напишите на <a href="mailto:hello@libermall.com?subject=Libermall%20ID%20client%20request">hello@libermall.com</a> с информацией:</p>
+    <h2 id="step-1">1. Get a client_id</h2>
+    <p>Email <a href="mailto:hello@libermall.com?subject=Libermall%20ID%20client%20request">hello@libermall.com</a> with:</p>
     <ul>
-      <li>Название и URL сервиса</li>
-      <li>Redirect URIs (одна или несколько)</li>
-      <li>Нужные scopes: <code>openid profile email</code> минимум</li>
+      <li>Service name and URL</li>
+      <li>Redirect URIs (one or more)</li>
+      <li>Required scopes: <code>openid profile email</code> at minimum</li>
     </ul>
-    <p>Получите <code>client_id</code> и <code>client_secret</code> в течение суток.</p>
+    <p>You will receive <code>client_id</code> and <code>client_secret</code> within 24 hours.</p>
 
-    <h2 id="step-2">2. Установите SDK</h2>
+    <h2 id="step-2">2. Install the SDK</h2>
     <pre><code>npm install openid-client
-# или для Laravel
+# or for Laravel
 composer require laravel/socialite
-# или для Python
+# or for Python
 pip install authlib</code></pre>
 
-    <h2 id="step-3">3. Настройте redirect</h2>
-    <p>В вашем приложении настройте OAuth-клиент с этими значениями:</p>
+    <h2 id="step-3">3. Configure the redirect</h2>
+    <p>Configure an OAuth client in your application with these values:</p>
     <pre><code>LIBERMALL_ID_HOST=https://id.libermall.com
-LIBERMALL_ID_CLIENT_ID=<полученный_id>
-LIBERMALL_ID_CLIENT_SECRET=<полученный_secret>
+LIBERMALL_ID_CLIENT_ID=<your_id>
+LIBERMALL_ID_CLIENT_SECRET=<your_secret>
 LIBERMALL_ID_REDIRECT=https://yourapp.com/oauth/libermall/callback</code></pre>
 
-    <h2 id="step-4">4. Добавьте кнопку</h2>
-    <p>Готовый snippet — копируйте как есть:</p>
+    <h2 id="step-4">4. Add the button</h2>
+    <p>Ready-made snippet — copy as is:</p>
     <pre><code>&lt;a href="/oauth/libermall" class="libermall-btn"&gt;
   &lt;svg width="20" height="20" viewBox="0 0 100 100"&gt;
     &lt;path d="M 16 14 L 38 14 L 50 38 L 62 14 L 84 14 L 84 60 L 50 94 L 16 60 Z" fill="#FFD60A"/&gt;
   &lt;/svg&gt;
-  Войти через Libermall ID
+  Sign in with Libermall ID
 &lt;/a&gt;
 
 &lt;style&gt;
@@ -109,8 +109,8 @@ LIBERMALL_ID_REDIRECT=https://yourapp.com/oauth/libermall/callback</code></pre>
 .libermall-btn:hover { background: #FFCB1A; }
 &lt;/style&gt;</code></pre>
 
-    <h2 id="step-5">5. Обработайте callback</h2>
-    <p>Пример для Express:</p>
+    <h2 id="step-5">5. Handle the callback</h2>
+    <p>Express example:</p>
     <pre><code>app.get(<span>'/oauth/libermall'</span>, (req, res) =&gt; {
   const url = <span>`${process.env.LIBERMALL_ID_HOST}/login/oauth/authorize?`</span> +
     <span>`response_type=code&client_id=${process.env.LIBERMALL_ID_CLIENT_ID}`</span> +
@@ -141,17 +141,17 @@ app.get(<span>'/oauth/libermall/callback'</span>, async (req, res) =&gt; {
   res.redirect('/');
 });</code></pre>
 
-    <h2>Готово 🎉</h2>
-    <p>Пользователи могут входить через Telegram, TON Connect, Google, Apple или Email одной кнопкой. Подробности — в <a href="/developers.html">полной документации</a>.</p>
+    <h2>Done 🎉</h2>
+    <p>Users can sign in via Telegram, TON Connect, Google, Apple or Email with one button. Details in the <a href="/developers.html">full documentation</a>.</p>
 
     <div class="cta-final" style="margin-top:48px;padding:32px;">
-      <h2 style="font-size:1.4rem;">Нужна помощь?</h2>
-      <p>Опишите ваш стек на <a href="mailto:hello@libermall.com">hello@libermall.com</a> — поможем с интеграцией.</p>
+      <h2 style="font-size:1.4rem;">Need help?</h2>
+      <p>Describe your stack at <a href="mailto:hello@libermall.com">hello@libermall.com</a> — we will help with the integration.</p>
     </div>
   </div>
 </article>
 
-<footer><div class="container"><div><img src="/assets/logo.svg" alt="Libermall ID" height="36"><p class="desc">Identity layer для экосистемы Libermall.</p></div><div><h4>Продукт</h4><ul><li><a href="/login.html">Войти</a></li><li><a href="/products.html">Экосистема</a></li><li><a href="/pricing.html">Pricing</a></li></ul></div><div><h4>Разработчикам</h4><ul><li><a href="/developers.html">Документация</a></li><li><a href="/api-playground.html">Playground</a></li></ul></div><div><h4>Компания</h4><ul><li><a href="/about.html">О проекте</a></li><li><a href="/privacy.html">Privacy</a></li></ul></div></div><div class="footer-bottom container"><div>© 2026 Libermall</div><div>Open source</div></div></footer>
+<footer><div class="container"><div><img src="/assets/logo.svg" alt="Libermall ID" height="36"><p class="desc">Identity layer for the Libermall ecosystem.</p></div><div><h4>Product</h4><ul><li><a href="/login.html">Sign in</a></li><li><a href="/products.html">Ecosystem</a></li><li><a href="/pricing.html">Pricing</a></li></ul></div><div><h4>Developers</h4><ul><li><a href="/developers.html">Documentation</a></li><li><a href="/api-playground.html">Playground</a></li></ul></div><div><h4>Company</h4><ul><li><a href="/about.html">About</a></li><li><a href="/privacy.html">Privacy</a></li></ul></div></div><div class="footer-bottom container"><div>© 2026 Libermall</div><div>Open source</div></div></footer>
 
 </body>
 </html>

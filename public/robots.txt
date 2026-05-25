@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-# Приватные / auth-flow страницы — не индексируем
+# Private / auth-flow pages — do not index
 Disallow: /dashboard.html
 Disallow: /confirm.html
 Disallow: /signup-username.html

@@ -133,7 +133,7 @@ section.section { padding: 80px 0; position: relative; }
 .section-head-center { text-align: center; max-width: 700px; margin: 0 auto 40px; }
 .section-head-center .section-lead { margin-left: auto; margin-right: auto; }
 
-/* ── why-id (3 cards с иконками вверху) ── */
+/* ── why-id (3 cards with top icons) ── */
 .why-grid { display: grid; grid-template-columns: 0.8fr 1fr 1fr 1fr; gap: 20px; align-items: stretch; }
 @media (max-width: 1024px) { .why-grid { grid-template-columns: 1fr; } }
 .why-text { padding: 8px 0; }
