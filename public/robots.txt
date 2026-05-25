@@ -1,9 +1,17 @@
 User-agent: *
 Allow: /
+
+# Приватные / auth-flow страницы — не индексируем
+Disallow: /dashboard.html
+Disallow: /confirm.html
+Disallow: /signup-username.html
+Disallow: /signup-profile.html
 Disallow: /api/
 Disallow: /login
-Disallow: /signup
 Disallow: /callback
 Disallow: /cb
+
+# Casdoor SPA internals
+Disallow: /static/
 
 Sitemap: https://id.libermall.com/sitemap.xml
