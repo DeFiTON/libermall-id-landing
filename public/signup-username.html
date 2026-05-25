@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Выберите username — Libermall ID</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#0A0A0C">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="/" class="nav-logo"><img src="/assets/logo.svg" alt="Libermall ID" height="36"></a>
+    <div class="nav-actions"><a href="/login.html" class="btn btn-ghost">Войти</a></div>
+  </div>
+</nav>
+
+<div class="auth-shell">
+  <div class="auth-card">
+    <div class="steps-bar">
+      <div class="step-dot done">✓</div>
+      <div class="seg active"></div>
+      <div class="step-dot active">2</div>
+      <div class="seg"></div>
+      <div class="step-dot">3</div>
+    </div>
+
+    <h1>Выберите username</h1>
+    <p class="sub">Уникальное имя в экосистеме Libermall</p>
+
+    <div class="field">
+      <div class="username-field">
+        <span class="at">@</span>
+        <input type="text" placeholder="yourname" autofocus pattern="[a-zA-Z0-9._]{4,30}" required>
+        <span class="suffix">.lbm</span>
+      </div>
+      <ul class="requirements">
+        <li>4-30 символов</li>
+        <li>Буквы, цифры, точки и нижние подчёркивания</li>
+        <li>Должен быть уникальным</li>
+      </ul>
+    </div>
+
+    <div class="auth-actions">
+      <a href="/signup.html" class="btn btn-secondary">Назад</a>
+      <a href="/signup-profile.html" class="btn btn-primary btn-block">Продолжить →</a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

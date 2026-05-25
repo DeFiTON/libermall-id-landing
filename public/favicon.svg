@@ -1,5 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
-  <path d="M24 0 L48 24 L24 48 L0 24 Z" fill="#FFD60A"/>
-  <path d="M18 16 L12 24 L18 32" stroke="#0D0D0F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-  <path d="M30 16 L36 24 L30 32" stroke="#0D0D0F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <path d="M 16 14 L 38 14 L 50 38 L 62 14 L 84 14 L 84 60 L 50 94 L 16 60 Z"
+        fill="#FFD60A" filter="url(#glow)"/>
 </svg>

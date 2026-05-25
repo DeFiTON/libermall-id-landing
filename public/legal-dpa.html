@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Processing Agreement — Libermall ID</title>
+<meta name="description" content="DPA для enterprise-клиентов Libermall ID. GDPR-compliant обработка данных.">
+<link rel="canonical" href="https://id.libermall.com/legal-dpa.html">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"><meta name="theme-color" content="#0A0A0C">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+
+<nav class="nav"><div class="container nav-inner"><a href="/" class="nav-logo"><img src="/assets/logo.svg" alt="Libermall ID" height="36"></a><div class="nav-links"><a href="/products.html">Продукты</a><a href="/developers.html">Разработчикам</a><a href="/about.html">О проекте</a></div><div class="nav-actions"><a href="/login.html" class="btn btn-ghost">Войти</a><a href="/signup.html" class="btn btn-primary">Создать</a></div></div></nav>
+
+<article class="long">
+  <div class="container-narrow">
+    <span class="eyebrow"><span class="dot"></span>Legal · Enterprise</span>
+    <h1>Data Processing Agreement (DPA)</h1>
+    <p class="article-lead">Эффективен с 2026-05-24. Версия 1.0. Заключается с enterprise-клиентами в дополнение к Terms of Service.</p>
+
+    <h2>1. Стороны</h2>
+    <p><strong>Контроллер:</strong> Клиент (компания, использующая Libermall ID для своих пользователей).<br>
+    <strong>Процессор:</strong> Libermall (оператор Libermall ID).</p>
+
+    <h2>2. Предмет обработки</h2>
+    <ul>
+      <li>Идентификаторы пользователей (Telegram ID, TON wallet, email)</li>
+      <li>Профильные данные (имя, аватар, language)</li>
+      <li>Сессии и audit log</li>
+      <li>OAuth consents</li>
+    </ul>
+
+    <h2>3. Цель обработки</h2>
+    <p>Предоставление сервиса единой аутентификации согласно <a href="/terms.html">Terms of Service</a> и инструкциям Контроллера.</p>
+
+    <h2>4. Категории субъектов</h2>
+    <p>Конечные пользователи Контроллера, использующие Libermall ID для входа в сервисы Контроллера.</p>
+
+    <h2>5. Sub-processors</h2>
+    <p>Libermall использует следующих sub-processors:</p>
+    <ul>
+      <li><strong>Fornex</strong> — VPS hosting (Frankfurt, DE)</li>
+      <li><strong>Cloudflare</strong> — DNS, CDN, DDoS защита</li>
+      <li><strong>Let's Encrypt</strong> — SSL сертификаты</li>
+      <li><strong>GitHub</strong> — хранение исходного кода (не данных)</li>
+    </ul>
+    <p>При добавлении новых sub-processors Контроллер уведомляется за 30 дней.</p>
+
+    <h2>6. Меры безопасности</h2>
+    <ul>
+      <li>Encryption at rest (PostgreSQL data + backups)</li>
+      <li>Encryption in transit (TLS 1.3)</li>
+      <li>Access control (RBAC, 2FA для admins)</li>
+      <li>Daily backups с шифрованием</li>
+      <li>Audit log с 12-month retention</li>
+      <li>Incident response plan</li>
+    </ul>
+
+    <h2>7. Передача данных</h2>
+    <p>Все данные хранятся в EU (Frankfurt, DE). Передача за пределы EU не осуществляется.</p>
+
+    <h2>8. Права субъектов</h2>
+    <p>По запросу Контроллера в течение 30 дней Libermall:</p>
+    <ul>
+      <li>Экспортирует данные субъекта (GDPR Article 15)</li>
+      <li>Исправляет неточные данные (Article 16)</li>
+      <li>Удаляет данные (Article 17)</li>
+      <li>Передаёт данные в machine-readable формате (Article 20)</li>
+    </ul>
+
+    <h2>9. Утечки данных</h2>
+    <p>В случае data breach Libermall уведомляет Контроллера в течение 24 часов и предоставляет:</p>
+    <ul>
+      <li>Описание характера утечки</li>
+      <li>Категории и количество затронутых субъектов</li>
+      <li>Принятые и планируемые меры</li>
+      <li>Контакт DPO для дополнительных запросов</li>
+    </ul>
+
+    <h2>10. Аудит</h2>
+    <p>Enterprise-клиенты имеют право на ежегодный аудит обработки данных, согласованный заранее. Альтернатива — независимые аудит-отчёты (SOC 2 Type 1 — Q4 2026, ISO 27001 — 2027).</p>
+
+    <h2>11. Прекращение</h2>
+    <p>При прекращении сотрудничества Libermall в течение 30 дней либо удаляет данные, либо возвращает их Контроллеру в зависимости от выбора Контроллера.</p>
+
+    <h2>12. Контакт</h2>
+    <p>DPO Libermall: <a href="mailto:dpo@libermall.com">dpo@libermall.com</a></p>
+
+    <p style="margin-top:48px;color:var(--muted);font-size:13px;">Для подписи DPA: <a href="mailto:legal@libermall.com">legal@libermall.com</a></p>
+  </div>
+</article>
+
+<footer><div class="container"><div><img src="/assets/logo.svg" alt="Libermall ID" height="36"><p class="desc">Identity layer для экосистемы Libermall.</p></div><div><h4>Продукт</h4><ul><li><a href="/login.html">Войти</a></li><li><a href="/products.html">Экосистема</a></li><li><a href="/pricing.html">Pricing</a></li></ul></div><div><h4>Разработчикам</h4><ul><li><a href="/developers.html">Документация</a></li></ul></div><div><h4>Legal</h4><ul><li><a href="/privacy.html">Privacy</a></li><li><a href="/terms.html">Terms</a></li><li><a href="/legal-dpa.html">DPA</a></li><li><a href="/legal-sla.html">SLA</a></li></ul></div></div><div class="footer-bottom container"><div>© 2026 Libermall</div><div>Open source</div></div></footer>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>API Playground — Libermall ID</title>
+<meta name="description" content="Интерактивный API explorer для Libermall ID. Попробуйте OIDC endpoints в реальном времени.">
+<link rel="canonical" href="https://id.libermall.com/api-playground.html">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"><meta name="theme-color" content="#0A0A0C">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+
+<nav class="nav"><div class="container nav-inner"><a href="/" class="nav-logo"><img src="/assets/logo.svg" alt="Libermall ID" height="36"></a><div class="nav-links"><a href="/products.html">Продукты</a><a href="/developers.html">Разработчикам</a><a href="/about.html">О проекте</a></div><div class="nav-actions"><a href="/login.html" class="btn btn-ghost">Войти</a><a href="/signup.html" class="btn btn-primary">Создать</a></div></div></nav>
+
+<header class="hero" style="padding-bottom:24px;">
+  <div class="container" style="text-align:center;max-width:760px;">
+    <span class="eyebrow"><span class="dot"></span>API Playground</span>
+    <h1>Попробуйте API в реальном времени</h1>
+    <p class="lead" style="margin:0 auto;">Интерактивный explorer для OIDC endpoints Libermall ID.</p>
+  </div>
+</header>
+
+<section class="section" style="padding-top:24px;">
+  <div class="container">
+    <div class="playground">
+      <div class="pg-pane">
+        <div class="pg-head"><div>Request</div><div>GET</div></div>
+        <div class="pg-body">
+          <div class="field"><label>Endpoint</label><input type="text" value="/.well-known/openid-configuration" readonly></div>
+          <div class="field"><label>Authorization (опционально)</label><input type="text" placeholder="Bearer sk_..."></div>
+          <button class="btn btn-primary" style="width:100%;">Send →</button>
+        </div>
+      </div>
+      <div class="pg-pane">
+        <div class="pg-head"><div>Response</div><div style="color:var(--green);">200 OK · 142ms</div></div>
+        <div class="code-block" style="border:0;font-size:11.5px;">{
+  <span class="c-str">"issuer"</span>: <span class="c-str">"https://id.libermall.com"</span>,
+  <span class="c-str">"authorization_endpoint"</span>: <span class="c-str">"https://id.libermall.com/login/oauth/authorize"</span>,
+  <span class="c-str">"token_endpoint"</span>: <span class="c-str">"https://id.libermall.com/api/login/oauth/access_token"</span>,
+  <span class="c-str">"userinfo_endpoint"</span>: <span class="c-str">"https://id.libermall.com/api/userinfo"</span>,
+  <span class="c-str">"jwks_uri"</span>: <span class="c-str">"https://id.libermall.com/.well-known/jwks"</span>,
+  <span class="c-str">"response_types_supported"</span>: [<span class="c-str">"code"</span>],
+  <span class="c-str">"grant_types_supported"</span>: [
+    <span class="c-str">"authorization_code"</span>,
+    <span class="c-str">"refresh_token"</span>
+  ],
+  <span class="c-str">"scopes_supported"</span>: [
+    <span class="c-str">"openid"</span>,
+    <span class="c-str">"profile"</span>,
+    <span class="c-str">"email"</span>,
+    <span class="c-str">"wallets"</span>
+  ],
+  <span class="c-str">"id_token_signing_alg_values_supported"</span>: [<span class="c-str">"RS256"</span>],
+  <span class="c-str">"code_challenge_methods_supported"</span>: [<span class="c-str">"S256"</span>]
+}</div>
+      </div>
+    </div>
+
+    <h2 class="section-title" style="font-size:1.3rem;margin-top:48px;">Доступные endpoints</h2>
+    <div style="background:var(--bg-elev-1);border:1px solid var(--border);border-radius:14px;padding:24px;">
+      <div style="display:grid;grid-template-columns:60px 1fr;gap:12px;padding:10px 0;border-bottom:1px solid var(--border);font-family:'JetBrains Mono',monospace;font-size:13px;"><span style="color:var(--green);">GET</span><div><b>/.well-known/openid-configuration</b><div style="color:var(--muted);font-family:Inter;font-size:12px;margin-top:2px;">Discovery doc — все endpoints</div></div></div>
+      <div style="display:grid;grid-template-columns:60px 1fr;gap:12px;padding:10px 0;border-bottom:1px solid var(--border);font-family:'JetBrains Mono',monospace;font-size:13px;"><span style="color:var(--green);">GET</span><div><b>/.well-known/jwks</b><div style="color:var(--muted);font-family:Inter;font-size:12px;margin-top:2px;">Public keys для верификации JWT</div></div></div>
+      <div style="display:grid;grid-template-columns:60px 1fr;gap:12px;padding:10px 0;border-bottom:1px solid var(--border);font-family:'JetBrains Mono',monospace;font-size:13px;"><span style="color:var(--green);">GET</span><div><b>/login/oauth/authorize</b><div style="color:var(--muted);font-family:Inter;font-size:12px;margin-top:2px;">Authorization endpoint — редирект юзера</div></div></div>
+      <div style="display:grid;grid-template-columns:60px 1fr;gap:12px;padding:10px 0;border-bottom:1px solid var(--border);font-family:'JetBrains Mono',monospace;font-size:13px;"><span style="color:var(--primary);">POST</span><div><b>/api/login/oauth/access_token</b><div style="color:var(--muted);font-family:Inter;font-size:12px;margin-top:2px;">Token exchange — code → access_token</div></div></div>
+      <div style="display:grid;grid-template-columns:60px 1fr;gap:12px;padding:10px 0;font-family:'JetBrains Mono',monospace;font-size:13px;"><span style="color:var(--green);">GET</span><div><b>/api/userinfo</b><div style="color:var(--muted);font-family:Inter;font-size:12px;margin-top:2px;">UserInfo — claims с Bearer токеном</div></div></div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="container"><div><img src="/assets/logo.svg" alt="Libermall ID" height="36"><p class="desc">Identity layer для экосистемы Libermall.</p></div><div><h4>Продукт</h4><ul><li><a href="/login.html">Войти</a></li><li><a href="/products.html">Экосистема</a></li><li><a href="/pricing.html">Pricing</a></li></ul></div><div><h4>Разработчикам</h4><ul><li><a href="/developers.html">Документация</a></li><li><a href="/api-playground.html">Playground</a></li></ul></div><div><h4>Компания</h4><ul><li><a href="/about.html">О проекте</a></li><li><a href="/privacy.html">Privacy</a></li></ul></div></div><div class="footer-bottom container"><div>© 2026 Libermall</div><div>Open source</div></div></footer>
+
+</body>
+</html>
