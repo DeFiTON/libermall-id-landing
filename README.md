@@ -40,9 +40,6 @@ You sign in once → every Libermall product knows who you are.
 | 🔁 **Libermall DEX** | [dex.libermall.com](https://dex.libermall.com) | Decentralized exchange on the TON blockchain |
 | 💳 **PayLibermall** | [pay.libermall.com](https://pay.libermall.com) | Payment system & merchant gateway for the ecosystem |
 | 💳 **Libermall Card** | [card.libermall.com](https://card.libermall.com) | Virtual cards funded by crypto |
-| ⭐ **Sites.Reviews** | [sites.reviews](https://sites.reviews) | Reputation & scam-check platform |
-| 🤖 **TonChat AI** | [tonchat.ai](https://tonchat.ai) | AI assistant for TON & crypto |
-| 🌐 **TON.CEO** | [ton.ceo](https://ton.ceo) | Mastodon-style social network for TON |
 
 We're building this at Amazon-scale ecosystem density — one identity, every surface.
 
@@ -219,14 +216,14 @@ Nginx routes everything **except** `/login`, `/signup`, `/callback`, `/api/*`, `
 
 - [x] Casdoor self-hosted on dedicated VPS
 - [x] Telegram Login provider with HMAC verification
-- [x] OAuth client #1: [sites.reviews](https://sites.reviews)
+- [x] First OAuth client live in production
 - [x] Branded landing site (25 pages, full English)
 - [x] @LibermallIDbot + Telegram Mini App
 - [x] SEO sweep (OG / Twitter / JSON-LD / robots / sitemap)
 - [ ] **JS / TS SDK on npm** — `@libermall/id` with React hooks
 - [ ] **GitHub Marketplace listing** — one-click install for any repo
 - [ ] TON Connect IdP — custom Ed25519 bridge
-- [ ] OAuth clients for [tonchat.ai](https://tonchat.ai), [ton.ceo](https://ton.ceo), [dex.libermall.com](https://dex.libermall.com), [pay.libermall.com](https://pay.libermall.com), [card.libermall.com](https://card.libermall.com)
+- [ ] OAuth clients across the full Libermall surface ([dex](https://dex.libermall.com), [pay](https://pay.libermall.com), [card](https://card.libermall.com))
 - [ ] NFT-bound usernames (`@handle.lbm` minted via Tact contract on TON)
 - [ ] $MALL utility token + cross-product reputation
 - [ ] **Libermall Passport** — Telegram-Passport-style KYC vault
